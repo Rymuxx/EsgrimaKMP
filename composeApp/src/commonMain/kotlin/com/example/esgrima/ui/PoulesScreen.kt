@@ -45,7 +45,7 @@ fun PoulesScreen(onBack: () -> Unit) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text("No hay poules generadas para esta competición.")
                     Spacer(modifier = Modifier.height(16.dp))
-                    Button(onClick = { DataRepository.createPoules(comp.id, 2) }) {
+                    Button(onClick = { DataRepository.createPoulesAutomaticamente(comp.id) }) {
                         Text("Generar Poules Automáticamente")
                     }
                 }

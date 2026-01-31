@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.datetime.Clock
 import kotlin.math.log2
 import kotlin.math.pow
+import kotlin.math.ceil
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.io.File
@@ -21,95 +22,93 @@ data class CompetitionState(
 )
 
 object DataRepository {
-    private val initialClubs = listOf(
-        Club("Sala de Armas del Ejercito", "FED-001"),
-        Club("Club de Esgrima Valencia", "FED-002"),
-        Club("Real Club de Esgrima Madrid", "FED-003"),
-        Club("Club de Esgrima Tarragona", "FED-004")
-    )
+    private val adminUser = User("u1", "admin", "admin123", Role.ADMIN)
+    private val DummyFencer = Tirador("bye", "PASO LIBRE", Club("---", ""), "---")
 
-    private val initialFencers = listOf(
-        Tirador("t1", "Juan Ramirez", initialClubs[0], "2001"),
-        Tirador("t2", "Juan Ramirez", initialClubs[0], "2034"),
-        Tirador("t3", "Maria Ramirez", initialClubs[1], "2101"),
-        Tirador("t4", "Juan Rodriguez", initialClubs[1], "1015"),
-        Tirador("t5", "Juan Random", initialClubs[1], "1021"),
-        Tirador("t6", "Pepa Conill", initialClubs[1], "2901"),
-        Tirador("t7", "Francisco Clausell", initialClubs[2], "3010"),
-        Tirador("t8", "Pablo Blanco", initialClubs[1], "2501"),
-        Tirador("t9", "Paz Gonzale", initialClubs[3], "2231"),
-        Tirador("t10", "Juanito Palotes", initialClubs[1], "2198"),
-        Tirador("t11", "Rodrigo Rodriguez", initialClubs[0], "21"),
-        Tirador("t12", "Ana Garcia", initialClubs[2], "4001"),
-        Tirador("t13", "Luis Moreno", initialClubs[3], "4002"),
-        Tirador("t14", "Elena Sanz", initialClubs[0], "4003"),
-        Tirador("t15", "Carlos Ruiz", initialClubs[1], "4004"),
-        Tirador("t16", "Sofia Vega", initialClubs[2], "4005")
-    )
-
-    private val initialReferees = listOf(
-        Arbitro("a1", "Juan Ramirez", "2001", listOf(Arma.ESPADA, Arma.SABLE, Arma.FLORETE)),
-        Arbitro("a2", "Juan Ramos", "2317", listOf(Arma.ESPADA, Arma.SABLE, Arma.FLORETE)),
-        Arbitro("a3", "Maria Ramirez", "2101", listOf(Arma.ESPADA, Arma.SABLE, Arma.FLORETE)),
-        Arbitro("a4", "Juan Rodriguez", "1015", listOf(Arma.SABLE, Arma.FLORETE)),
-        Arbitro("a5", "Juan Random", "1021", listOf(Arma.ESPADA, Arma.SABLE)),
-        Arbitro("a6", "Juanito Palotes", "2198", listOf(Arma.ESPADA, Arma.SABLE, Arma.FLORETE)),
-        Arbitro("a7", "Rodrigo Rodriguez", "21", listOf(Arma.ESPADA, Arma.SABLE, Arma.FLORETE))
-    )
-
-    private val initialUsers = listOf(
-        User("u1", "admin", "admin123", Role.ADMIN),
-        User("u2", "arbitro", "arbitro123", Role.REFEREE, "a1"),
-        User("u3", "tirador", "tirador123", Role.FENCER, "t3")
-    )
-
-    private val demoCompetitions = listOf(
-        Competicion(
-            id = "c1",
-            nombre = "Octavos de Final Demo (16 Tiradores)",
-            entidadOrganizadora = "Federación Nacional",
-            fecha = "2025-02-15",
-            lugar = "Madrid",
-            arma = Arma.ESPADA,
-            inscritosIds = initialFencers.map { it.id }.toSet()
-        ),
-        Competicion(
-            id = "c2",
-            nombre = "Cuartos de Final Demo (8 Tiradores)",
-            entidadOrganizadora = "Club Esgrima Valencia",
-            fecha = "2025-03-10",
-            lugar = "Valencia",
-            arma = Arma.FLORETE,
-            inscritosIds = initialFencers.take(8).map { it.id }.toSet()
-        ),
-        Competicion(
-            id = "c3",
-            nombre = "Final a 4 Demo",
-            entidadOrganizadora = "Sala de Armas Ejercito",
-            fecha = "2025-04-05",
-            lugar = "Toledo",
-            arma = Arma.SABLE,
-            inscritosIds = initialFencers.take(4).map { it.id }.toSet()
-        )
-    )
-
-    private val _fencers = MutableStateFlow<List<Tirador>>(initialFencers)
+    private val _fencers = MutableStateFlow<List<Tirador>>(emptyList())
     val fencers: StateFlow<List<Tirador>> = _fencers.asStateFlow()
 
-    private val _referees = MutableStateFlow<List<Arbitro>>(initialReferees)
+    private val _referees = MutableStateFlow<List<Arbitro>>(emptyList())
     val referees: StateFlow<List<Arbitro>> = _referees.asStateFlow()
 
-    private val _users = MutableStateFlow<List<User>>(initialUsers)
+    private val _users = MutableStateFlow<List<User>>(listOf(adminUser))
     val users: StateFlow<List<User>> = _users.asStateFlow()
 
     private val _currentUser = MutableStateFlow<User?>(null)
     val currentUser: StateFlow<User?> = _currentUser.asStateFlow()
 
-    private val _competitions = MutableStateFlow<List<Competicion>>(demoCompetitions)
+    private val _competitions = MutableStateFlow<List<Competicion>>(emptyList())
     val competitions: StateFlow<List<Competicion>> = _competitions.asStateFlow()
 
     private val _selectedCompetitionId = MutableStateFlow<String?>(null)
     val selectedCompetitionId: StateFlow<String?> = _selectedCompetitionId.asStateFlow()
+
+    init {
+        cargarDesdeDisco()
+        if (_fencers.value.size < 32 || _referees.value.size < 16) {
+            seedData()
+        }
+    }
+
+    private fun seedData() {
+        val nombres = listOf("Juan", "Maria", "Carlos", "Ana", "Pedro", "Lucia", "Diego", "Elena", "Pablo", "Sara", "Luis", "Marta", "Jorge", "Laura", "Raul", "Sofia", "Ines", "Javier", "Carmen", "Miguel")
+        val apellidos = listOf("Ramirez", "Rodriguez", "Blanco", "Garcia", "Lopez", "Perez", "Martinez", "Sanz", "Gomez", "Torres", "Ruiz", "Vidal", "Castro", "Ortiz")
+        val clubes = listOf("Sala de Armas del Ejercito", "Club de Esgrima Valencia", "Real Club de Esgrima Madrid", "Club de Esgrima Tarragona")
+
+        var i = 1
+        while (_fencers.value.size < 32) {
+            val lic = (1000 + i).toString()
+            val id = "t$lic"
+            if (_fencers.value.none { it.id == id }) {
+                val nombre = "${nombres.random()} ${apellidos.random()}"
+                addFencer(Tirador(id, nombre, Club(clubes.random(), ""), lic))
+            }
+            i++
+        }
+
+        var j = 1
+        while (_referees.value.size < 16) {
+            val lic = (2000 + j).toString()
+            val id = "a$lic"
+            if (_referees.value.none { it.id == id }) {
+                val nombre = "${nombres.random()} ${apellidos.random()}"
+                addReferee(Arbitro(id, nombre, lic, listOf(Arma.ESPADA, Arma.SABLE, Arma.FLORETE).shuffled().take(Random.nextInt(1, 4))))
+            }
+            j++
+        }
+
+        if (_competitions.value.isEmpty()) {
+            addCompetition(Competicion("test_comp", "Torneo Inaugural 2025", "Federación", "2025-01-25", "Madrid", Arma.ESPADA))
+        }
+        
+        save()
+    }
+
+    private fun save() {
+        try {
+            val json = Json { prettyPrint = true }
+            val state = CompetitionState(_fencers.value, _referees.value, _competitions.value, _users.value)
+            File("competicion.json").writeText(json.encodeToString(CompetitionState.serializer(), state))
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun cargarDesdeDisco() {
+        try {
+            val file = File("competicion.json")
+            if (file.exists()) {
+                val json = Json { ignoreUnknownKeys = true }
+                val state = json.decodeFromString(CompetitionState.serializer(), file.readText())
+                _fencers.value = state.fencers
+                _referees.value = state.referees
+                _competitions.value = state.competitions
+                _users.value = state.users
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
 
     fun login(username: String, password: String): Boolean {
         val user = _users.value.find { 
@@ -125,51 +124,84 @@ object DataRepository {
         _currentUser.value = null
     }
 
+    fun switchRole(role: Role) {
+        val user = when (role) {
+            Role.ADMIN -> adminUser
+            Role.REFEREE -> _users.value.find { it.role == Role.REFEREE } ?: User("temp_ref", "Referee", "", Role.REFEREE)
+            Role.FENCER -> _users.value.find { it.role == Role.FENCER } ?: User("temp_fen", "Fencer", "", Role.FENCER)
+        }
+        _currentUser.value = user
+    }
+
+    fun deleteCompetition(id: String) {
+        _competitions.value = _competitions.value.filter { it.id != id }
+        save()
+    }
+
     fun selectCompetition(id: String?) {
         _selectedCompetitionId.value = id
     }
 
     fun inscribirseEnCompeticion(competitionId: String) {
-        val user = _currentUser.value ?: return
-        val fencerId = user.linkedId ?: return
-        if (user.role != Role.FENCER) return
-        
+        val fencerId = _currentUser.value?.linkedId ?: return
+        inscribirseEnCompeticionConId(competitionId, fencerId)
+    }
+
+    fun inscribirseEnCompeticionConId(competitionId: String, fencerId: String) {
         _competitions.value = _competitions.value.map { comp ->
             if (comp.id == competitionId) {
-                comp.copy(inscritosIds = comp.inscritosIds + fencerId)
+                val currentIds = comp.inscritosIds
+                val newIds = if (currentIds.contains(fencerId)) currentIds - fencerId else currentIds + fencerId
+                comp.copy(inscritosIds = newIds)
             } else comp
         }
+        save()
+    }
+
+    fun inscribirATodos(competitionId: String) {
+        val allFencerIds = _fencers.value.map { it.id }.toSet()
+        _competitions.value = _competitions.value.map { comp ->
+            if (comp.id == competitionId) {
+                comp.copy(inscritosIds = allFencerIds)
+            } else comp
+        }
+        save()
     }
 
     fun addFencer(fencer: Tirador) {
+        if (_fencers.value.any { it.id == fencer.id }) return
         _fencers.value += fencer
         _users.value += User(
-            id = Clock.System.now().toEpochMilliseconds().toString(), 
-            username = fencer.nombre.split(" ")[0].lowercase(), 
+            id = "user_${fencer.id}", 
+            username = fencer.nombre.split(" ")[0].lowercase() + fencer.numeroAfiliado, 
             password = "password123",
             role = Role.FENCER, 
             linkedId = fencer.id
         )
+        save()
     }
 
     fun addReferee(referee: Arbitro) {
+        if (_referees.value.any { it.id == referee.id }) return
         _referees.value += referee
         _users.value += User(
-            id = Clock.System.now().toEpochMilliseconds().toString(), 
-            username = referee.nombre.split(" ")[0].lowercase(), 
+            id = "user_${referee.id}", 
+            username = referee.nombre.split(" ")[0].lowercase() + referee.numeroAfiliado, 
             password = "password123",
             role = Role.REFEREE, 
             linkedId = referee.id
         )
+        save()
     }
 
     fun addCompetition(comp: Competicion) {
         _competitions.value += comp
+        save()
     }
 
-    private fun getRandomSpecialistReferee(arma: Arma): Arbitro {
+    private fun getRandomSpecialistReferee(arma: Arma): Arbitro? {
         val specialists = _referees.value.filter { it.especialidades.contains(arma) }
-        return if (specialists.isNotEmpty()) specialists.random() else initialReferees.first { it.especialidades.contains(arma) }
+        return if (specialists.isNotEmpty()) specialists.random() else _referees.value.firstOrNull()
     }
 
     fun simulateResults(competitionId: String) {
@@ -184,24 +216,28 @@ object DataRepository {
                 comp.copy(poules = simPoules, fase = FaseCompeticion.POULES)
             } else comp
         }
+        save()
     }
 
-    fun createPoules(competitionId: String, numPoules: Int) {
+    fun createPoulesAutomaticamente(competitionId: String, numPoulesInput: Int? = null) {
         val comp = _competitions.value.find { it.id == competitionId } ?: return
-        val currentFencers = _fencers.value.filter { it.id in comp.inscritosIds }.shuffled()
-        if (currentFencers.isEmpty()) return
+        val inscritos = _fencers.value.filter { it.id in comp.inscritosIds }.shuffled()
+        
+        if (inscritos.size < 2) return
 
-        val fencersPerPoule = (currentFencers.size + numPoules - 1) / numPoules
-        val chunks = currentFencers.chunked(fencersPerPoule)
+        val numPoules = (numPoulesInput ?: 1).coerceAtMost(inscritos.size / 2).coerceAtLeast(1)
+        val fencersPerPoule = ceil(inscritos.size.toDouble() / numPoules).toInt()
+        val chunks = inscritos.chunked(fencersPerPoule)
         
         val newPoules = chunks.mapIndexed { index, fencersInPoule ->
             val asaltos = mutableListOf<Asalto>()
             for (i in fencersInPoule.indices) {
                 for (j in i + 1 until fencersInPoule.size) {
+                    val referee = getRandomSpecialistReferee(comp.arma) ?: Arbitro("temp", "Sin Arbitro", "0", emptyList())
                     asaltos.add(
                         Asalto(
-                            id = "asalto_${competitionId}_${index}_${i}_${j}",
-                            arbitro = getRandomSpecialistReferee(comp.arma),
+                            id = "asalto_${competitionId}_${index}_${i}_${j}_${Clock.System.now().toEpochMilliseconds()}",
+                            arbitro = referee,
                             tirador1 = fencersInPoule[i],
                             tirador2 = fencersInPoule[j]
                         )
@@ -211,8 +247,8 @@ object DataRepository {
             Poule(
                 id = "poule_${competitionId}_${index}",
                 nombre = "Poule ${index + 1}",
-                asaltos = asaltos.shuffled(),
-                arbitros = listOf(getRandomSpecialistReferee(comp.arma)),
+                asaltos = asaltos,
+                arbitros = listOfNotNull(getRandomSpecialistReferee(comp.arma)),
                 pistas = listOf("Pista ${index + 1}")
             )
         }
@@ -222,6 +258,7 @@ object DataRepository {
                 c.copy(poules = newPoules, fase = FaseCompeticion.POULES, rondasEliminatorias = emptyList())
             } else c
         }
+        save()
     }
 
     fun updateAsalto(competitionId: String, pouleId: String, asaltoId: String, t1: Int, t2: Int, terminado: Boolean) {
@@ -238,6 +275,7 @@ object DataRepository {
                 })
             } else comp
         }
+        save()
     }
 
     private fun getSeedingOrder(n: Int): List<Int> {
@@ -256,11 +294,15 @@ object DataRepository {
 
     fun generarCuadroEliminatorio(competitionId: String) {
         val comp = _competitions.value.find { it.id == competitionId } ?: return
-        val ranking = getRankingCalculado(comp)
+        val completeRanking = getRankingCalculado(comp)
+        
+        // REGLA: Solo pasan a eliminatorias los que han ganado al menos un asalto (llegado a 5 primero)
+        val ranking = completeRanking.filter { it.victorias > 0 }
+        
         val numTiradores = ranking.size
         if (numTiradores == 0) return
 
-        val nextPowerOfTwo = 2.0.pow(kotlin.math.ceil(log2(numTiradores.toDouble()))).toInt()
+        val nextPowerOfTwo = 2.0.pow(ceil(log2(numTiradores.toDouble())).coerceAtLeast(1.0)).toInt()
         val order = getSeedingOrder(nextPowerOfTwo)
         
         val asaltos = mutableListOf<Asalto>()
@@ -272,18 +314,19 @@ object DataRepository {
             val t2 = ranking.getOrNull(s2 - 1)?.tirador
             
             if (t1 != null && t2 != null) {
+                val referee = getRandomSpecialistReferee(comp.arma) ?: Arbitro("temp", "Sin Arbitro", "0", emptyList())
                 asaltos.add(Asalto(
-                    id = "e_${competitionId}_${nextPowerOfTwo}_${i/2}",
-                    arbitro = getRandomSpecialistReferee(comp.arma),
+                    id = "e_${competitionId}_${nextPowerOfTwo}_${i/2}_${Clock.System.now().toEpochMilliseconds()}",
+                    arbitro = referee,
                     tirador1 = t1,
                     tirador2 = t2
                 ))
             } else if (t1 != null) {
                 asaltos.add(Asalto(
-                    id = "e_${competitionId}_${nextPowerOfTwo}_${i/2}",
-                    arbitro = initialReferees[0],
+                    id = "e_${competitionId}_${nextPowerOfTwo}_${i/2}_${Clock.System.now().toEpochMilliseconds()}",
+                    arbitro = Arbitro("bye", "BYE", "0", emptyList()),
                     tirador1 = t1,
-                    tirador2 = t1,
+                    tirador2 = DummyFencer,
                     tocados1 = 15,
                     tocados2 = 0,
                     terminado = true,
@@ -305,36 +348,37 @@ object DataRepository {
                 c.copy(rondasEliminatorias = listOf(Ronda(nombre, asaltos)), fase = FaseCompeticion.ELIMINATORIAS)
             } else c
         }
+        save()
     }
 
     fun avanzarCuadro(competitionId: String) {
         val comp = _competitions.value.find { it.id == competitionId } ?: return
         val actual = comp.rondasEliminatorias.lastOrNull() ?: return
-        if (actual.asaltos.size <= 1 && actual.asaltos.all { it.terminado }) return
-
+        
         val ganadores = actual.asaltos.map { asalto ->
             if (asalto.esBye) asalto.tirador1
             else if (asalto.tocados1 >= asalto.tocados2) asalto.tirador1 
             else asalto.tirador2
-        }
+        }.filter { it.id != DummyFencer.id }
 
         val nuevosAsaltos = mutableListOf<Asalto>()
         for (i in ganadores.indices step 2) {
             val t1 = ganadores[i]
             val t2 = ganadores.getOrNull(i + 1)
             if (t2 != null) {
+                val referee = getRandomSpecialistReferee(comp.arma) ?: Arbitro("temp", "Sin Arbitro", "0", emptyList())
                 nuevosAsaltos.add(Asalto(
-                    id = "e_${competitionId}_${actual.asaltos.size}_${i/2}",
-                    arbitro = getRandomSpecialistReferee(comp.arma),
+                    id = "e_${competitionId}_${actual.asaltos.size / 2}_${i/2}_${Clock.System.now().toEpochMilliseconds()}",
+                    arbitro = referee,
                     tirador1 = t1,
                     tirador2 = t2
                 ))
             } else {
                 nuevosAsaltos.add(Asalto(
-                    id = "e_${competitionId}_${actual.asaltos.size}_${i/2}",
-                    arbitro = initialReferees[0],
+                    id = "e_${competitionId}_${actual.asaltos.size / 2}_${i/2}_${Clock.System.now().toEpochMilliseconds()}",
+                    arbitro = Arbitro("bye", "BYE", "0", emptyList()),
                     tirador1 = t1,
-                    tirador2 = t1,
+                    tirador2 = DummyFencer,
                     tocados1 = 15,
                     terminado = true,
                     esBye = true
@@ -354,6 +398,7 @@ object DataRepository {
                 c.copy(rondasEliminatorias = c.rondasEliminatorias + Ronda(nombre, nuevosAsaltos))
             } else c
         }
+        save()
     }
 
     fun updateAsaltoCuadro(competitionId: String, nombreRonda: String, asaltoId: String, t1: Int, t2: Int, terminado: Boolean) {
@@ -370,6 +415,7 @@ object DataRepository {
                 })
             } else comp
         }
+        save()
     }
 
     fun getRankingCalculado(comp: Competicion): List<Clasificacion> {
@@ -400,29 +446,31 @@ object DataRepository {
         ).mapIndexed { index, clasificacion -> clasificacion.copy(posicion = index + 1) }
     }
 
-    fun guardarEnDisco() {
-        try {
-            val json = Json { prettyPrint = true }
-            val state = CompetitionState(_fencers.value, _referees.value, _competitions.value, _users.value)
-            File("competicion.json").writeText(json.encodeToString(CompetitionState.serializer(), state))
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    fun cargarDesdeDisco() {
-        try {
-            val file = File("competicion.json")
-            if (file.exists()) {
-                val json = Json { ignoreUnknownKeys = true }
-                val state = json.decodeFromString(CompetitionState.serializer(), file.readText())
-                _fencers.value = state.fencers
-                _referees.value = state.referees
-                _competitions.value = state.competitions
-                _users.value = state.users
+    fun getRankingGlobal(): List<Clasificacion> {
+        val allAsaltos = _competitions.value.flatMap { it.poules.flatMap { p -> p.asaltos } + it.rondasEliminatorias.flatMap { r -> r.asaltos } }
+        return _fencers.value.map { fencer ->
+            val matches = allAsaltos.filter { it.terminado && (it.tirador1.id == fencer.id || it.tirador2.id == fencer.id) }
+            val wins = matches.count { 
+                (it.tirador1.id == fencer.id && it.tocados1 > it.tocados2) || 
+                (it.tirador2.id == fencer.id && it.tocados2 > it.tocados1) 
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+            val td = matches.sumOf { if (it.tirador1.id == fencer.id) it.tocados1 else it.tocados2 }
+            val tr = matches.sumOf { if (it.tirador1.id == fencer.id) it.tocados2 else it.tocados1 }
+            
+            val v_m = if (matches.isNotEmpty()) wins.toDouble() / matches.size else 0.0
+            Clasificacion(
+                tirador = fencer,
+                victorias = wins,
+                combates = matches.size,
+                v_m = v_m,
+                td = td,
+                tr = tr,
+                indice = td - tr
+            )
+        }.sortedWith(
+            compareByDescending<Clasificacion> { it.v_m }
+                .thenByDescending { it.indice }
+                .thenByDescending { it.td }
+        ).mapIndexed { index, clasificacion -> clasificacion.copy(posicion = index + 1) }
     }
 }

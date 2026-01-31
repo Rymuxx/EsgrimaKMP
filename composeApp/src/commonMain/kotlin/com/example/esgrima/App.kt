@@ -4,22 +4,23 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.esgrima.data.DataRepository
-import com.example.esgrima.models.Role
 import com.example.esgrima.ui.*
 
 @Composable
 fun App() {
     MaterialTheme {
         val navController = rememberNavController()
-        val currentUser by DataRepository.currentUser.collectAsState()
+        val usuarioActual by DataRepository.currentUser.collectAsState()
         
-        NavHost(navController = navController, startDestination = "login") {
+        NavHost(navController = navController, startDestination = if (usuarioActual == null) "login" else "dashboard") {
             composable("login") {
-                LoginScreen(onLoginSuccess = { _ ->
+                LoginScreen(onLoginSuccess = {
                     navController.navigate("dashboard") {
                         popUpTo("login") { inclusive = true }
                     }
@@ -37,33 +38,34 @@ fun App() {
                     }
                 })
             }
-            composable("fencers") {
-                if (currentUser?.role == Role.ADMIN) {
-                    FencersScreen(onBack = { navController.popBackStack() })
-                }
+            composable("tiradores") {
+                TiradoresScreen(onBack = { navController.popBackStack() })
             }
-            composable("referees") {
-                if (currentUser?.role == Role.ADMIN) {
-                    RefereesScreen(onBack = { navController.popBackStack() })
-                }
+            composable("arbitros") {
+               RefereesScreen(onBack = { navController.popBackStack() })
+            }
+            composable("ranking") {
+                RankingScreen(onBack = { navController.popBackStack() })
             }
             composable("competitions") {
                 CompetitionsScreen(
                     onBack = { navController.popBackStack() },
-                    onSelectCompetition = { navController.navigate("poules") }
+                    onSelectCompetition = { id -> 
+                        navController.navigate("competition_detail/$id") 
+                    }
                 )
             }
-            composable("poules") {
-                PoulesScreen(onBack = { navController.popBackStack() })
-            }
-            composable("results") {
-                ResultsSummaryScreen(onBack = { navController.popBackStack() })
-            }
-            composable("eliminatorias") {
-                EliminatoriasScreen(onBack = { navController.popBackStack() })
-            }
-            composable("ranking") {
-                RankingScreen(onBack = { navController.popBackStack() })
+            composable(
+                "competition_detail/{competitionId}",
+                arguments = listOf(navArgument("competitionId") { type = NavType.StringType })
+            ) { backStackEntry ->
+                val competitionId = backStackEntry.arguments?.getString("competitionId")
+                if (competitionId != null) {
+                    CompetitionDetailScreen(
+                        competitionId = competitionId,
+                        onBack = { navController.popBackStack() }
+                    )
+                }
             }
         }
     }

@@ -16,16 +16,12 @@ import com.example.esgrima.data.DataRepository
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RankingScreen(onBack: () -> Unit) {
-    val selectedCompId by DataRepository.selectedCompetitionId.collectAsState()
-    val competitions by DataRepository.competitions.collectAsState()
-    val comp = competitions.find { it.id == selectedCompId }
-    
-    val ranking = comp?.let { DataRepository.getRankingCalculado(it) } ?: emptyList()
+    val ranking = DataRepository.getRankingGlobal()
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(comp?.let { "Clasificación - ${it.nombre}" } ?: "Clasificación General") },
+                title = { Text("Ranking Global de Tiradores") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Volver")
@@ -34,9 +30,9 @@ fun RankingScreen(onBack: () -> Unit) {
             )
         }
     ) { padding ->
-        if (comp == null) {
+        if (ranking.isEmpty()) {
             Box(modifier = Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
-                Text("Selecciona una competición primero.")
+                Text("No hay resultados registrados todavía.")
             }
         } else {
             LazyColumn(

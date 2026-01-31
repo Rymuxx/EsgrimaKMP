@@ -6,7 +6,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -18,9 +17,9 @@ import kotlinx.datetime.Clock
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FencersScreen(onBack: () -> Unit) {
+fun TiradoresScreen(onBack: () -> Unit) {
     var showAddDialog by remember { mutableStateOf(false) }
-    val fencers by DataRepository.fencers.collectAsState()
+    val tiradores by DataRepository.fencers.collectAsState()
     
     var name by remember { mutableStateOf("") }
     var clubName by remember { mutableStateOf("") }
@@ -48,7 +47,7 @@ fun FencersScreen(onBack: () -> Unit) {
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            items(fencers) { fencer ->
+            items(tiradores) { fencer ->
                 Card(modifier = Modifier.fillMaxWidth()) {
                     ListItem(
                         headlineContent = { Text(fencer.nombre) },
