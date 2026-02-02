@@ -30,8 +30,8 @@ fun DashboardScreen(onNavigate: (String) -> Unit) {
     val allItems = listOf(
         DashboardItem("Competiciones", Icons.Default.EmojiEvents, "competitions"),
         DashboardItem("Ranking Global", Icons.Default.FormatListNumbered, "ranking"),
-        DashboardItem("Tiradores", Icons.Default.Person, "fencers"),
-        DashboardItem("Árbitros", Icons.Default.Gavel, "referees")
+        DashboardItem("Tiradores", Icons.Default.Person, "tiradores"),
+        DashboardItem("Árbitros", Icons.Default.Gavel, "arbitros")
     )
 
     val visibleItems = when (currentUser?.role) {
