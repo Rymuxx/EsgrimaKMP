@@ -1,0 +1,4063 @@
+{
+    "fencers": [
+        {
+            "id": "t2001",
+            "nombre": "Juan Ramirez",
+            "club": {
+                "nombre": "Sala de Armas del Ejercito",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "2001"
+        },
+        {
+            "id": "t2034",
+            "nombre": "Juan Ramirez",
+            "club": {
+                "nombre": "Sala de Armas del Ejercito",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "2034"
+        },
+        {
+            "id": "t2101",
+            "nombre": "Maria Ramirez",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "2101"
+        },
+        {
+            "id": "t1015",
+            "nombre": "Juan Rodriguez",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1015"
+        },
+        {
+            "id": "t1021",
+            "nombre": "Juan Random",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1021"
+        },
+        {
+            "id": "t2901",
+            "nombre": "Pepa Conill",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "2901"
+        },
+        {
+            "id": "t3010",
+            "nombre": "Francisco Clausell",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "3010"
+        },
+        {
+            "id": "t2501",
+            "nombre": "Pablo Blanco",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "2501"
+        },
+        {
+            "id": "t2231",
+            "nombre": "Paz Gonzale",
+            "club": {
+                "nombre": "Club de Esgrima Tarragona",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "2231"
+        },
+        {
+            "id": "t2198",
+            "nombre": "Juanito Palotes",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "2198"
+        },
+        {
+            "id": "t21",
+            "nombre": "Rodrigo Rodriguez",
+            "club": {
+                "nombre": "Sala de Armas del Ejercito",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "21"
+        },
+        {
+            "id": "1769818611276",
+            "nombre": "Iker Toribio",
+            "club": {
+                "nombre": "Sala almazora1",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "24135"
+        },
+        {
+            "id": "t1013",
+            "nombre": "Carlos Ramirez",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1013"
+        },
+        {
+            "id": "t1014",
+            "nombre": "Raul Sanz",
+            "club": {
+                "nombre": "Club de Esgrima Tarragona",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1014"
+        },
+        {
+            "id": "t1016",
+            "nombre": "Maria Blanco",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1016"
+        },
+        {
+            "id": "t1017",
+            "nombre": "Marta Lopez",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1017"
+        },
+        {
+            "id": "t1018",
+            "nombre": "Luis Torres",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1018"
+        },
+        {
+            "id": "t1019",
+            "nombre": "Raul Vidal",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1019"
+        },
+        {
+            "id": "t1020",
+            "nombre": "Lucia Ruiz",
+            "club": {
+                "nombre": "Sala de Armas del Ejercito",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1020"
+        },
+        {
+            "id": "t1022",
+            "nombre": "Elena Ruiz",
+            "club": {
+                "nombre": "Sala de Armas del Ejercito",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1022"
+        },
+        {
+            "id": "t1023",
+            "nombre": "Marta Martinez",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1023"
+        },
+        {
+            "id": "t1024",
+            "nombre": "Pedro Perez",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1024"
+        },
+        {
+            "id": "t1025",
+            "nombre": "Marta Garcia",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1025"
+        },
+        {
+            "id": "t1026",
+            "nombre": "Luis Perez",
+            "club": {
+                "nombre": "Club de Esgrima Valencia",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1026"
+        },
+        {
+            "id": "t1027",
+            "nombre": "Ana Gomez",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1027"
+        },
+        {
+            "id": "t1028",
+            "nombre": "Lucia Blanco",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1028"
+        },
+        {
+            "id": "t1029",
+            "nombre": "Sara Blanco",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1029"
+        },
+        {
+            "id": "t1030",
+            "nombre": "Sofia Garcia",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1030"
+        },
+        {
+            "id": "t1031",
+            "nombre": "Juan Gomez",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1031"
+        },
+        {
+            "id": "t1032",
+            "nombre": "Sofia Torres",
+            "club": {
+                "nombre": "Real Club de Esgrima Madrid",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1032"
+        },
+        {
+            "id": "1769819062248",
+            "nombre": "Jesus Luis",
+            "club": {
+                "nombre": "Club Albacete",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "1235"
+        },
+        {
+            "id": "1769819072960",
+            "nombre": "Raton Perez",
+            "club": {
+                "nombre": "Club ratones",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "6234"
+        },
+        {
+            "id": "1770371567937",
+            "nombre": "Iker",
+            "club": {
+                "nombre": "2",
+                "numeroFiliacion": ""
+            },
+            "numeroAfiliado": "2",
+            "especialidades": [
+                "FLORETE",
+                "ESPADA",
+                "SABLE"
+            ]
+        }
+    ],
+    "referees": [
+        {
+            "id": "a2001",
+            "nombre": "Juan Ramirez",
+            "numeroAfiliado": "2001",
+            "especialidades": [
+                "ESPADA",
+                "SABLE",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a2317",
+            "nombre": "Juan Ramos",
+            "numeroAfiliado": "2317",
+            "especialidades": [
+                "ESPADA",
+                "SABLE",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a2101",
+            "nombre": "Maria Ramirez",
+            "numeroAfiliado": "2101",
+            "especialidades": [
+                "ESPADA",
+                "SABLE",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a1015",
+            "nombre": "Juan Rodriguez",
+            "numeroAfiliado": "1015",
+            "especialidades": [
+                "SABLE",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a1021",
+            "nombre": "Juan Random",
+            "numeroAfiliado": "1021",
+            "especialidades": [
+                "ESPADA",
+                "SABLE"
+            ]
+        },
+        {
+            "id": "a2198",
+            "nombre": "Juanito Palotes",
+            "numeroAfiliado": "2198",
+            "especialidades": [
+                "ESPADA",
+                "SABLE",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a21",
+            "nombre": "Rodrigo Rodriguez",
+            "numeroAfiliado": "21",
+            "especialidades": [
+                "ESPADA",
+                "SABLE",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a2008",
+            "nombre": "Pedro Blanco",
+            "numeroAfiliado": "2008",
+            "especialidades": [
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a2009",
+            "nombre": "Maria Ruiz",
+            "numeroAfiliado": "2009",
+            "especialidades": [
+                "SABLE",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a2010",
+            "nombre": "Elena Ruiz",
+            "numeroAfiliado": "2010",
+            "especialidades": [
+                "FLORETE",
+                "ESPADA"
+            ]
+        },
+        {
+            "id": "a2011",
+            "nombre": "Pablo Perez",
+            "numeroAfiliado": "2011",
+            "especialidades": [
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a2012",
+            "nombre": "Raul Ramirez",
+            "numeroAfiliado": "2012",
+            "especialidades": [
+                "SABLE",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a2013",
+            "nombre": "Ana Lopez",
+            "numeroAfiliado": "2013",
+            "especialidades": [
+                "ESPADA",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a2014",
+            "nombre": "Maria Garcia",
+            "numeroAfiliado": "2014",
+            "especialidades": [
+                "SABLE",
+                "ESPADA",
+                "FLORETE"
+            ]
+        },
+        {
+            "id": "a2015",
+            "nombre": "Raul Gomez",
+            "numeroAfiliado": "2015",
+            "especialidades": [
+                "FLORETE",
+                "ESPADA"
+            ]
+        },
+        {
+            "id": "a2016",
+            "nombre": "Raul Torres",
+            "numeroAfiliado": "2016",
+            "especialidades": [
+                "FLORETE",
+                "SABLE",
+                "ESPADA"
+            ]
+        }
+    ],
+    "competitions": [
+        {
+            "id": "1770371954444",
+            "nombre": "123",
+            "entidadOrganizadora": "123",
+            "fecha": "2025-01-20",
+            "lugar": "123",
+            "arma": "ESPADA",
+            "fase": "FINALIZADA",
+            "inscritosIds": [
+                "t2001",
+                "t2034",
+                "t2101",
+                "t1015",
+                "t1021",
+                "t2901",
+                "t3010",
+                "t2501",
+                "t2231",
+                "t2198",
+                "t21",
+                "1769818611276",
+                "t1013",
+                "t1014",
+                "t1016",
+                "t1017",
+                "t1018",
+                "t1019",
+                "t1020",
+                "t1022",
+                "t1023",
+                "t1024",
+                "t1025",
+                "t1026",
+                "t1027",
+                "t1028",
+                "t1029",
+                "t1030",
+                "t1031",
+                "t1032",
+                "1769819062248",
+                "1769819072960",
+                "1770371567937"
+            ],
+            "poules": [
+                {
+                    "id": "poule_1770371954444_0",
+                    "nombre": "Poule 1",
+                    "asaltos": [
+                        {
+                            "id": "asalto_1770371954444_0_0_1_1770371960649",
+                            "arbitro": {
+                                "id": "a1021",
+                                "nombre": "Juan Random",
+                                "numeroAfiliado": "1021",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1013",
+                                "nombre": "Carlos Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1013"
+                            },
+                            "tirador2": {
+                                "id": "1769819062248",
+                                "nombre": "Jesus Luis",
+                                "club": {
+                                    "nombre": "Club Albacete",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1235"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 2,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_0_2_1770371960652",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1013",
+                                "nombre": "Carlos Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1013"
+                            },
+                            "tirador2": {
+                                "id": "t1017",
+                                "nombre": "Marta Lopez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1017"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_0_3_1770371960652",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1013",
+                                "nombre": "Carlos Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1013"
+                            },
+                            "tirador2": {
+                                "id": "t1020",
+                                "nombre": "Lucia Ruiz",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1020"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 1,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_0_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1013",
+                                "nombre": "Carlos Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1013"
+                            },
+                            "tirador2": {
+                                "id": "t1026",
+                                "nombre": "Luis Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1026"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_0_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1013",
+                                "nombre": "Carlos Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1013"
+                            },
+                            "tirador2": {
+                                "id": "t2901",
+                                "nombre": "Pepa Conill",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2901"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_1_2_1770371960652",
+                            "arbitro": {
+                                "id": "a2198",
+                                "nombre": "Juanito Palotes",
+                                "numeroAfiliado": "2198",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769819062248",
+                                "nombre": "Jesus Luis",
+                                "club": {
+                                    "nombre": "Club Albacete",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1235"
+                            },
+                            "tirador2": {
+                                "id": "t1017",
+                                "nombre": "Marta Lopez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1017"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 1,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_1_3_1770371960652",
+                            "arbitro": {
+                                "id": "a2001",
+                                "nombre": "Juan Ramirez",
+                                "numeroAfiliado": "2001",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769819062248",
+                                "nombre": "Jesus Luis",
+                                "club": {
+                                    "nombre": "Club Albacete",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1235"
+                            },
+                            "tirador2": {
+                                "id": "t1020",
+                                "nombre": "Lucia Ruiz",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1020"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_1_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2010",
+                                "nombre": "Elena Ruiz",
+                                "numeroAfiliado": "2010",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769819062248",
+                                "nombre": "Jesus Luis",
+                                "club": {
+                                    "nombre": "Club Albacete",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1235"
+                            },
+                            "tirador2": {
+                                "id": "t1026",
+                                "nombre": "Luis Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1026"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_1_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2010",
+                                "nombre": "Elena Ruiz",
+                                "numeroAfiliado": "2010",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769819062248",
+                                "nombre": "Jesus Luis",
+                                "club": {
+                                    "nombre": "Club Albacete",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1235"
+                            },
+                            "tirador2": {
+                                "id": "t2901",
+                                "nombre": "Pepa Conill",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2901"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 3,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_2_3_1770371960652",
+                            "arbitro": {
+                                "id": "a2013",
+                                "nombre": "Ana Lopez",
+                                "numeroAfiliado": "2013",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1017",
+                                "nombre": "Marta Lopez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1017"
+                            },
+                            "tirador2": {
+                                "id": "t1020",
+                                "nombre": "Lucia Ruiz",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1020"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 3,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_2_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1017",
+                                "nombre": "Marta Lopez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1017"
+                            },
+                            "tirador2": {
+                                "id": "t1026",
+                                "nombre": "Luis Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1026"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 4,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_2_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2317",
+                                "nombre": "Juan Ramos",
+                                "numeroAfiliado": "2317",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1017",
+                                "nombre": "Marta Lopez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1017"
+                            },
+                            "tirador2": {
+                                "id": "t2901",
+                                "nombre": "Pepa Conill",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2901"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_3_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2013",
+                                "nombre": "Ana Lopez",
+                                "numeroAfiliado": "2013",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1020",
+                                "nombre": "Lucia Ruiz",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1020"
+                            },
+                            "tirador2": {
+                                "id": "t1026",
+                                "nombre": "Luis Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1026"
+                            },
+                            "tocados1": 2,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_3_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2013",
+                                "nombre": "Ana Lopez",
+                                "numeroAfiliado": "2013",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1020",
+                                "nombre": "Lucia Ruiz",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1020"
+                            },
+                            "tirador2": {
+                                "id": "t2901",
+                                "nombre": "Pepa Conill",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2901"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 4,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_0_4_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2101",
+                                "nombre": "Maria Ramirez",
+                                "numeroAfiliado": "2101",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1026",
+                                "nombre": "Luis Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1026"
+                            },
+                            "tirador2": {
+                                "id": "t2901",
+                                "nombre": "Pepa Conill",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2901"
+                            },
+                            "tocados1": 5,
+                            "terminado": true
+                        }
+                    ],
+                    "arbitros": [
+                        {
+                            "id": "a2001",
+                            "nombre": "Juan Ramirez",
+                            "numeroAfiliado": "2001",
+                            "especialidades": [
+                                "ESPADA",
+                                "SABLE",
+                                "FLORETE"
+                            ]
+                        }
+                    ],
+                    "pistas": [
+                        "Pista 1"
+                    ]
+                },
+                {
+                    "id": "poule_1770371954444_1",
+                    "nombre": "Poule 2",
+                    "asaltos": [
+                        {
+                            "id": "asalto_1770371954444_1_0_1_1770371960652",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1016",
+                                "nombre": "Maria Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1016"
+                            },
+                            "tirador2": {
+                                "id": "t1030",
+                                "nombre": "Sofia Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1030"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 1,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_0_2_1770371960652",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1016",
+                                "nombre": "Maria Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1016"
+                            },
+                            "tirador2": {
+                                "id": "t2231",
+                                "nombre": "Paz Gonzale",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2231"
+                            },
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_0_3_1770371960652",
+                            "arbitro": {
+                                "id": "a1021",
+                                "nombre": "Juan Random",
+                                "numeroAfiliado": "1021",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1016",
+                                "nombre": "Maria Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1016"
+                            },
+                            "tirador2": {
+                                "id": "1769819072960",
+                                "nombre": "Raton Perez",
+                                "club": {
+                                    "nombre": "Club ratones",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "6234"
+                            },
+                            "tocados1": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_0_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2014",
+                                "nombre": "Maria Garcia",
+                                "numeroAfiliado": "2014",
+                                "especialidades": [
+                                    "SABLE",
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1016",
+                                "nombre": "Maria Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1016"
+                            },
+                            "tirador2": {
+                                "id": "t1023",
+                                "nombre": "Marta Martinez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1023"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 4,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_0_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2014",
+                                "nombre": "Maria Garcia",
+                                "numeroAfiliado": "2014",
+                                "especialidades": [
+                                    "SABLE",
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1016",
+                                "nombre": "Maria Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1016"
+                            },
+                            "tirador2": {
+                                "id": "t2501",
+                                "nombre": "Pablo Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2501"
+                            },
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_1_2_1770371960652",
+                            "arbitro": {
+                                "id": "a1021",
+                                "nombre": "Juan Random",
+                                "numeroAfiliado": "1021",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1030",
+                                "nombre": "Sofia Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1030"
+                            },
+                            "tirador2": {
+                                "id": "t2231",
+                                "nombre": "Paz Gonzale",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2231"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_1_3_1770371960652",
+                            "arbitro": {
+                                "id": "a2014",
+                                "nombre": "Maria Garcia",
+                                "numeroAfiliado": "2014",
+                                "especialidades": [
+                                    "SABLE",
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1030",
+                                "nombre": "Sofia Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1030"
+                            },
+                            "tirador2": {
+                                "id": "1769819072960",
+                                "nombre": "Raton Perez",
+                                "club": {
+                                    "nombre": "Club ratones",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "6234"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_1_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2014",
+                                "nombre": "Maria Garcia",
+                                "numeroAfiliado": "2014",
+                                "especialidades": [
+                                    "SABLE",
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1030",
+                                "nombre": "Sofia Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1030"
+                            },
+                            "tirador2": {
+                                "id": "t1023",
+                                "nombre": "Marta Martinez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1023"
+                            },
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_1_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2010",
+                                "nombre": "Elena Ruiz",
+                                "numeroAfiliado": "2010",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1030",
+                                "nombre": "Sofia Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1030"
+                            },
+                            "tirador2": {
+                                "id": "t2501",
+                                "nombre": "Pablo Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2501"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_2_3_1770371960652",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2231",
+                                "nombre": "Paz Gonzale",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2231"
+                            },
+                            "tirador2": {
+                                "id": "1769819072960",
+                                "nombre": "Raton Perez",
+                                "club": {
+                                    "nombre": "Club ratones",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "6234"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 3,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_2_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2010",
+                                "nombre": "Elena Ruiz",
+                                "numeroAfiliado": "2010",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2231",
+                                "nombre": "Paz Gonzale",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2231"
+                            },
+                            "tirador2": {
+                                "id": "t1023",
+                                "nombre": "Marta Martinez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1023"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_2_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2001",
+                                "nombre": "Juan Ramirez",
+                                "numeroAfiliado": "2001",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2231",
+                                "nombre": "Paz Gonzale",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2231"
+                            },
+                            "tirador2": {
+                                "id": "t2501",
+                                "nombre": "Pablo Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2501"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_3_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769819072960",
+                                "nombre": "Raton Perez",
+                                "club": {
+                                    "nombre": "Club ratones",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "6234"
+                            },
+                            "tirador2": {
+                                "id": "t1023",
+                                "nombre": "Marta Martinez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1023"
+                            },
+                            "tocados1": 2,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_3_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2101",
+                                "nombre": "Maria Ramirez",
+                                "numeroAfiliado": "2101",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769819072960",
+                                "nombre": "Raton Perez",
+                                "club": {
+                                    "nombre": "Club ratones",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "6234"
+                            },
+                            "tirador2": {
+                                "id": "t2501",
+                                "nombre": "Pablo Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2501"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 4,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_1_4_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1023",
+                                "nombre": "Marta Martinez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1023"
+                            },
+                            "tirador2": {
+                                "id": "t2501",
+                                "nombre": "Pablo Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2501"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 3,
+                            "terminado": true
+                        }
+                    ],
+                    "arbitros": [
+                        {
+                            "id": "a2014",
+                            "nombre": "Maria Garcia",
+                            "numeroAfiliado": "2014",
+                            "especialidades": [
+                                "SABLE",
+                                "ESPADA",
+                                "FLORETE"
+                            ]
+                        }
+                    ],
+                    "pistas": [
+                        "Pista 2"
+                    ]
+                },
+                {
+                    "id": "poule_1770371954444_2",
+                    "nombre": "Poule 3",
+                    "asaltos": [
+                        {
+                            "id": "asalto_1770371954444_2_0_1_1770371960652",
+                            "arbitro": {
+                                "id": "a2010",
+                                "nombre": "Elena Ruiz",
+                                "numeroAfiliado": "2010",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1018",
+                                "nombre": "Luis Torres",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1018"
+                            },
+                            "tirador2": {
+                                "id": "t2198",
+                                "nombre": "Juanito Palotes",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2198"
+                            },
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_0_2_1770371960652",
+                            "arbitro": {
+                                "id": "a2198",
+                                "nombre": "Juanito Palotes",
+                                "numeroAfiliado": "2198",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1018",
+                                "nombre": "Luis Torres",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1018"
+                            },
+                            "tirador2": {
+                                "id": "t1027",
+                                "nombre": "Ana Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1027"
+                            },
+                            "tocados1": 2,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_0_3_1770371960652",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1018",
+                                "nombre": "Luis Torres",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1018"
+                            },
+                            "tirador2": {
+                                "id": "t1021",
+                                "nombre": "Juan Random",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1021"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_0_4_1770371960652",
+                            "arbitro": {
+                                "id": "a21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "numeroAfiliado": "21",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1018",
+                                "nombre": "Luis Torres",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1018"
+                            },
+                            "tirador2": {
+                                "id": "t1031",
+                                "nombre": "Juan Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1031"
+                            },
+                            "tocados1": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_0_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2317",
+                                "nombre": "Juan Ramos",
+                                "numeroAfiliado": "2317",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1018",
+                                "nombre": "Luis Torres",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1018"
+                            },
+                            "tirador2": {
+                                "id": "t2034",
+                                "nombre": "Juan Ramirez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2034"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 2,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_1_2_1770371960652",
+                            "arbitro": {
+                                "id": "a2013",
+                                "nombre": "Ana Lopez",
+                                "numeroAfiliado": "2013",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2198",
+                                "nombre": "Juanito Palotes",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2198"
+                            },
+                            "tirador2": {
+                                "id": "t1027",
+                                "nombre": "Ana Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1027"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 3,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_1_3_1770371960652",
+                            "arbitro": {
+                                "id": "a2010",
+                                "nombre": "Elena Ruiz",
+                                "numeroAfiliado": "2010",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2198",
+                                "nombre": "Juanito Palotes",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2198"
+                            },
+                            "tirador2": {
+                                "id": "t1021",
+                                "nombre": "Juan Random",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1021"
+                            },
+                            "tocados1": 3,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_1_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2198",
+                                "nombre": "Juanito Palotes",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2198"
+                            },
+                            "tirador2": {
+                                "id": "t1031",
+                                "nombre": "Juan Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1031"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 1,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_1_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2198",
+                                "nombre": "Juanito Palotes",
+                                "numeroAfiliado": "2198",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2198",
+                                "nombre": "Juanito Palotes",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2198"
+                            },
+                            "tirador2": {
+                                "id": "t2034",
+                                "nombre": "Juan Ramirez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2034"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_2_3_1770371960652",
+                            "arbitro": {
+                                "id": "a2198",
+                                "nombre": "Juanito Palotes",
+                                "numeroAfiliado": "2198",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1027",
+                                "nombre": "Ana Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1027"
+                            },
+                            "tirador2": {
+                                "id": "t1021",
+                                "nombre": "Juan Random",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1021"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 1,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_2_4_1770371960652",
+                            "arbitro": {
+                                "id": "a21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "numeroAfiliado": "21",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1027",
+                                "nombre": "Ana Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1027"
+                            },
+                            "tirador2": {
+                                "id": "t1031",
+                                "nombre": "Juan Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1031"
+                            },
+                            "tocados1": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_2_5_1770371960652",
+                            "arbitro": {
+                                "id": "a1021",
+                                "nombre": "Juan Random",
+                                "numeroAfiliado": "1021",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1027",
+                                "nombre": "Ana Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1027"
+                            },
+                            "tirador2": {
+                                "id": "t2034",
+                                "nombre": "Juan Ramirez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2034"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 3,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_3_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1021",
+                                "nombre": "Juan Random",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1021"
+                            },
+                            "tirador2": {
+                                "id": "t1031",
+                                "nombre": "Juan Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1031"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_3_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2010",
+                                "nombre": "Elena Ruiz",
+                                "numeroAfiliado": "2010",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1021",
+                                "nombre": "Juan Random",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1021"
+                            },
+                            "tirador2": {
+                                "id": "t2034",
+                                "nombre": "Juan Ramirez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2034"
+                            },
+                            "tocados1": 3,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_2_4_5_1770371960652",
+                            "arbitro": {
+                                "id": "a2014",
+                                "nombre": "Maria Garcia",
+                                "numeroAfiliado": "2014",
+                                "especialidades": [
+                                    "SABLE",
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1031",
+                                "nombre": "Juan Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1031"
+                            },
+                            "tirador2": {
+                                "id": "t2034",
+                                "nombre": "Juan Ramirez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2034"
+                            },
+                            "tocados1": 5,
+                            "terminado": true
+                        }
+                    ],
+                    "arbitros": [
+                        {
+                            "id": "a2014",
+                            "nombre": "Maria Garcia",
+                            "numeroAfiliado": "2014",
+                            "especialidades": [
+                                "SABLE",
+                                "ESPADA",
+                                "FLORETE"
+                            ]
+                        }
+                    ],
+                    "pistas": [
+                        "Pista 3"
+                    ]
+                },
+                {
+                    "id": "poule_1770371954444_3",
+                    "nombre": "Poule 4",
+                    "asaltos": [
+                        {
+                            "id": "asalto_1770371954444_3_0_1_1770371960652",
+                            "arbitro": {
+                                "id": "a2014",
+                                "nombre": "Maria Garcia",
+                                "numeroAfiliado": "2014",
+                                "especialidades": [
+                                    "SABLE",
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2001",
+                                "nombre": "Juan Ramirez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2001"
+                            },
+                            "tirador2": {
+                                "id": "1769818611276",
+                                "nombre": "Iker Toribio",
+                                "club": {
+                                    "nombre": "Sala almazora1",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "24135"
+                            },
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_3_0_2_1770371960652",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2001",
+                                "nombre": "Juan Ramirez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2001"
+                            },
+                            "tirador2": {
+                                "id": "t1022",
+                                "nombre": "Elena Ruiz",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1022"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 2,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_3_0_3_1770371960652",
+                            "arbitro": {
+                                "id": "a21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "numeroAfiliado": "21",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2001",
+                                "nombre": "Juan Ramirez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2001"
+                            },
+                            "tirador2": {
+                                "id": "t1025",
+                                "nombre": "Marta Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1025"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_3_0_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2001",
+                                "nombre": "Juan Ramirez",
+                                "numeroAfiliado": "2001",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2001",
+                                "nombre": "Juan Ramirez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2001"
+                            },
+                            "tirador2": {
+                                "id": "t1029",
+                                "nombre": "Sara Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1029"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 4,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_3_1_2_1770371960652",
+                            "arbitro": {
+                                "id": "a2013",
+                                "nombre": "Ana Lopez",
+                                "numeroAfiliado": "2013",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769818611276",
+                                "nombre": "Iker Toribio",
+                                "club": {
+                                    "nombre": "Sala almazora1",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "24135"
+                            },
+                            "tirador2": {
+                                "id": "t1022",
+                                "nombre": "Elena Ruiz",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1022"
+                            },
+                            "tocados1": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_3_1_3_1770371960652",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769818611276",
+                                "nombre": "Iker Toribio",
+                                "club": {
+                                    "nombre": "Sala almazora1",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "24135"
+                            },
+                            "tirador2": {
+                                "id": "t1025",
+                                "nombre": "Marta Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1025"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_3_1_4_1770371960652",
+                            "arbitro": {
+                                "id": "a2013",
+                                "nombre": "Ana Lopez",
+                                "numeroAfiliado": "2013",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769818611276",
+                                "nombre": "Iker Toribio",
+                                "club": {
+                                    "nombre": "Sala almazora1",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "24135"
+                            },
+                            "tirador2": {
+                                "id": "t1029",
+                                "nombre": "Sara Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1029"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 3,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_3_2_3_1770371960653",
+                            "arbitro": {
+                                "id": "a2317",
+                                "nombre": "Juan Ramos",
+                                "numeroAfiliado": "2317",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1022",
+                                "nombre": "Elena Ruiz",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1022"
+                            },
+                            "tirador2": {
+                                "id": "t1025",
+                                "nombre": "Marta Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1025"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_3_2_4_1770371960653",
+                            "arbitro": {
+                                "id": "a21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "numeroAfiliado": "21",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1022",
+                                "nombre": "Elena Ruiz",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1022"
+                            },
+                            "tirador2": {
+                                "id": "t1029",
+                                "nombre": "Sara Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1029"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 1,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_3_3_4_1770371960653",
+                            "arbitro": {
+                                "id": "a2198",
+                                "nombre": "Juanito Palotes",
+                                "numeroAfiliado": "2198",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1025",
+                                "nombre": "Marta Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1025"
+                            },
+                            "tirador2": {
+                                "id": "t1029",
+                                "nombre": "Sara Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1029"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 2,
+                            "terminado": true
+                        }
+                    ],
+                    "arbitros": [
+                        {
+                            "id": "a2015",
+                            "nombre": "Raul Gomez",
+                            "numeroAfiliado": "2015",
+                            "especialidades": [
+                                "FLORETE",
+                                "ESPADA"
+                            ]
+                        }
+                    ],
+                    "pistas": [
+                        "Pista 4"
+                    ]
+                },
+                {
+                    "id": "poule_1770371954444_4",
+                    "nombre": "Poule 5",
+                    "asaltos": [
+                        {
+                            "id": "asalto_1770371954444_4_0_1_1770371960653",
+                            "arbitro": {
+                                "id": "a2317",
+                                "nombre": "Juan Ramos",
+                                "numeroAfiliado": "2317",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1014",
+                                "nombre": "Raul Sanz",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1014"
+                            },
+                            "tirador2": {
+                                "id": "t1024",
+                                "nombre": "Pedro Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1024"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_4_0_2_1770371960653",
+                            "arbitro": {
+                                "id": "a2014",
+                                "nombre": "Maria Garcia",
+                                "numeroAfiliado": "2014",
+                                "especialidades": [
+                                    "SABLE",
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1014",
+                                "nombre": "Raul Sanz",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1014"
+                            },
+                            "tirador2": {
+                                "id": "t3010",
+                                "nombre": "Francisco Clausell",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "3010"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 1,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_4_0_3_1770371960653",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1014",
+                                "nombre": "Raul Sanz",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1014"
+                            },
+                            "tirador2": {
+                                "id": "t1028",
+                                "nombre": "Lucia Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1028"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_4_0_4_1770371960653",
+                            "arbitro": {
+                                "id": "a2013",
+                                "nombre": "Ana Lopez",
+                                "numeroAfiliado": "2013",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1014",
+                                "nombre": "Raul Sanz",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1014"
+                            },
+                            "tirador2": {
+                                "id": "t1015",
+                                "nombre": "Juan Rodriguez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1015"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 3,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_4_1_2_1770371960653",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1024",
+                                "nombre": "Pedro Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1024"
+                            },
+                            "tirador2": {
+                                "id": "t3010",
+                                "nombre": "Francisco Clausell",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "3010"
+                            },
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_4_1_3_1770371960653",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1024",
+                                "nombre": "Pedro Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1024"
+                            },
+                            "tirador2": {
+                                "id": "t1028",
+                                "nombre": "Lucia Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1028"
+                            },
+                            "tocados1": 3,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_4_1_4_1770371960653",
+                            "arbitro": {
+                                "id": "a2001",
+                                "nombre": "Juan Ramirez",
+                                "numeroAfiliado": "2001",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1024",
+                                "nombre": "Pedro Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1024"
+                            },
+                            "tirador2": {
+                                "id": "t1015",
+                                "nombre": "Juan Rodriguez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1015"
+                            },
+                            "tocados1": 2,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_4_2_3_1770371960653",
+                            "arbitro": {
+                                "id": "a2101",
+                                "nombre": "Maria Ramirez",
+                                "numeroAfiliado": "2101",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t3010",
+                                "nombre": "Francisco Clausell",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "3010"
+                            },
+                            "tirador2": {
+                                "id": "t1028",
+                                "nombre": "Lucia Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1028"
+                            },
+                            "tocados1": 2,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_4_2_4_1770371960653",
+                            "arbitro": {
+                                "id": "a2001",
+                                "nombre": "Juan Ramirez",
+                                "numeroAfiliado": "2001",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t3010",
+                                "nombre": "Francisco Clausell",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "3010"
+                            },
+                            "tirador2": {
+                                "id": "t1015",
+                                "nombre": "Juan Rodriguez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1015"
+                            },
+                            "tocados1": 4,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_4_3_4_1770371960653",
+                            "arbitro": {
+                                "id": "a1021",
+                                "nombre": "Juan Random",
+                                "numeroAfiliado": "1021",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1028",
+                                "nombre": "Lucia Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1028"
+                            },
+                            "tirador2": {
+                                "id": "t1015",
+                                "nombre": "Juan Rodriguez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1015"
+                            },
+                            "tocados1": 3,
+                            "tocados2": 5,
+                            "terminado": true
+                        }
+                    ],
+                    "arbitros": [
+                        {
+                            "id": "a1021",
+                            "nombre": "Juan Random",
+                            "numeroAfiliado": "1021",
+                            "especialidades": [
+                                "ESPADA",
+                                "SABLE"
+                            ]
+                        }
+                    ],
+                    "pistas": [
+                        "Pista 5"
+                    ]
+                },
+                {
+                    "id": "poule_1770371954444_5",
+                    "nombre": "Poule 6",
+                    "asaltos": [
+                        {
+                            "id": "asalto_1770371954444_5_0_1_1770371960653",
+                            "arbitro": {
+                                "id": "a21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "numeroAfiliado": "21",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1770371567937",
+                                "nombre": "Iker",
+                                "club": {
+                                    "nombre": "2",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador2": {
+                                "id": "t21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "21"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 1,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_5_0_2_1770371960653",
+                            "arbitro": {
+                                "id": "a2001",
+                                "nombre": "Juan Ramirez",
+                                "numeroAfiliado": "2001",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1770371567937",
+                                "nombre": "Iker",
+                                "club": {
+                                    "nombre": "2",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador2": {
+                                "id": "t1019",
+                                "nombre": "Raul Vidal",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1019"
+                            },
+                            "tocados1": 3,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_5_0_3_1770371960653",
+                            "arbitro": {
+                                "id": "a2198",
+                                "nombre": "Juanito Palotes",
+                                "numeroAfiliado": "2198",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1770371567937",
+                                "nombre": "Iker",
+                                "club": {
+                                    "nombre": "2",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador2": {
+                                "id": "t2101",
+                                "nombre": "Maria Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2101"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_5_0_4_1770371960653",
+                            "arbitro": {
+                                "id": "a2001",
+                                "nombre": "Juan Ramirez",
+                                "numeroAfiliado": "2001",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1770371567937",
+                                "nombre": "Iker",
+                                "club": {
+                                    "nombre": "2",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador2": {
+                                "id": "t1032",
+                                "nombre": "Sofia Torres",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1032"
+                            },
+                            "tocados1": 3,
+                            "tocados2": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_5_1_2_1770371960653",
+                            "arbitro": {
+                                "id": "a2317",
+                                "nombre": "Juan Ramos",
+                                "numeroAfiliado": "2317",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "21"
+                            },
+                            "tirador2": {
+                                "id": "t1019",
+                                "nombre": "Raul Vidal",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1019"
+                            },
+                            "tocados1": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_5_1_3_1770371960653",
+                            "arbitro": {
+                                "id": "a2317",
+                                "nombre": "Juan Ramos",
+                                "numeroAfiliado": "2317",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "21"
+                            },
+                            "tirador2": {
+                                "id": "t2101",
+                                "nombre": "Maria Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2101"
+                            },
+                            "tocados1": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_5_1_4_1770371960653",
+                            "arbitro": {
+                                "id": "a21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "numeroAfiliado": "21",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "21"
+                            },
+                            "tirador2": {
+                                "id": "t1032",
+                                "nombre": "Sofia Torres",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1032"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 4,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_5_2_3_1770371960653",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1019",
+                                "nombre": "Raul Vidal",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1019"
+                            },
+                            "tirador2": {
+                                "id": "t2101",
+                                "nombre": "Maria Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2101"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 2,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_5_2_4_1770371960653",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1019",
+                                "nombre": "Raul Vidal",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1019"
+                            },
+                            "tirador2": {
+                                "id": "t1032",
+                                "nombre": "Sofia Torres",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1032"
+                            },
+                            "tocados1": 5,
+                            "terminado": true
+                        },
+                        {
+                            "id": "asalto_1770371954444_5_3_4_1770371960653",
+                            "arbitro": {
+                                "id": "a2014",
+                                "nombre": "Maria Garcia",
+                                "numeroAfiliado": "2014",
+                                "especialidades": [
+                                    "SABLE",
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2101",
+                                "nombre": "Maria Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2101"
+                            },
+                            "tirador2": {
+                                "id": "t1032",
+                                "nombre": "Sofia Torres",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1032"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 1,
+                            "terminado": true
+                        }
+                    ],
+                    "arbitros": [
+                        {
+                            "id": "a2016",
+                            "nombre": "Raul Torres",
+                            "numeroAfiliado": "2016",
+                            "especialidades": [
+                                "FLORETE",
+                                "SABLE",
+                                "ESPADA"
+                            ]
+                        }
+                    ],
+                    "pistas": [
+                        "Pista 6"
+                    ]
+                }
+            ],
+            "rondasEliminatorias": [
+                {
+                    "nombre": "Octavos",
+                    "asaltos": [
+                        {
+                            "id": "e_1770371954444_16_0_1770371968760",
+                            "arbitro": {
+                                "id": "a21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "numeroAfiliado": "21",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1025",
+                                "nombre": "Marta Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1025"
+                            },
+                            "tirador2": {
+                                "id": "t2101",
+                                "nombre": "Maria Ramirez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2101"
+                            },
+                            "tocados1": 15,
+                            "terminado": true,
+                            "ganadorId": "t1025",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_16_1_1770371968762",
+                            "arbitro": {
+                                "id": "a2001",
+                                "nombre": "Juan Ramirez",
+                                "numeroAfiliado": "2001",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1019",
+                                "nombre": "Raul Vidal",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1019"
+                            },
+                            "tirador2": {
+                                "id": "t1015",
+                                "nombre": "Juan Rodriguez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1015"
+                            },
+                            "tocados1": 6,
+                            "tocados2": 15,
+                            "terminado": true,
+                            "ganadorId": "t1015",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_16_2_1770371968762",
+                            "arbitro": {
+                                "id": "a21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "numeroAfiliado": "21",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1026",
+                                "nombre": "Luis Perez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1026"
+                            },
+                            "tirador2": {
+                                "id": "t1017",
+                                "nombre": "Marta Lopez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1017"
+                            },
+                            "tocados1": 14,
+                            "tocados2": 15,
+                            "terminado": true,
+                            "ganadorId": "t1017",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_16_3_1770371968762",
+                            "arbitro": {
+                                "id": "a1021",
+                                "nombre": "Juan Random",
+                                "numeroAfiliado": "1021",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "1769818611276",
+                                "nombre": "Iker Toribio",
+                                "club": {
+                                    "nombre": "Sala almazora1",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "24135"
+                            },
+                            "tirador2": {
+                                "id": "t2231",
+                                "nombre": "Paz Gonzale",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2231"
+                            },
+                            "tocados1": 15,
+                            "tocados2": 3,
+                            "terminado": true,
+                            "ganadorId": "1769818611276",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_16_4_1770371968762",
+                            "arbitro": {
+                                "id": "a2014",
+                                "nombre": "Maria Garcia",
+                                "numeroAfiliado": "2014",
+                                "especialidades": [
+                                    "SABLE",
+                                    "ESPADA",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1027",
+                                "nombre": "Ana Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1027"
+                            },
+                            "tirador2": {
+                                "id": "t1014",
+                                "nombre": "Raul Sanz",
+                                "club": {
+                                    "nombre": "Club de Esgrima Tarragona",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1014"
+                            },
+                            "tocados1": 15,
+                            "tocados2": 5,
+                            "terminado": true,
+                            "ganadorId": "t1027",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_16_5_1770371968762",
+                            "arbitro": {
+                                "id": "a2198",
+                                "nombre": "Juanito Palotes",
+                                "numeroAfiliado": "2198",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t21",
+                                "nombre": "Rodrigo Rodriguez",
+                                "club": {
+                                    "nombre": "Sala de Armas del Ejercito",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "21"
+                            },
+                            "tirador2": {
+                                "id": "t2501",
+                                "nombre": "Pablo Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2501"
+                            },
+                            "tocados1": 12,
+                            "tocados2": 15,
+                            "terminado": true,
+                            "ganadorId": "t2501",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_16_6_1770371968762",
+                            "arbitro": {
+                                "id": "a2016",
+                                "nombre": "Raul Torres",
+                                "numeroAfiliado": "2016",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "SABLE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1023",
+                                "nombre": "Marta Martinez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1023"
+                            },
+                            "tirador2": {
+                                "id": "t1016",
+                                "nombre": "Maria Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1016"
+                            },
+                            "tocados1": 15,
+                            "tocados2": 14,
+                            "terminado": true,
+                            "ganadorId": "t1023",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_16_7_1770371968762",
+                            "arbitro": {
+                                "id": "a2010",
+                                "nombre": "Elena Ruiz",
+                                "numeroAfiliado": "2010",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1028",
+                                "nombre": "Lucia Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1028"
+                            },
+                            "tirador2": {
+                                "id": "t2198",
+                                "nombre": "Juanito Palotes",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2198"
+                            },
+                            "tocados1": 15,
+                            "tocados2": 12,
+                            "terminado": true,
+                            "ganadorId": "t1028",
+                            "limiteTocados": 15
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Cuartos",
+                    "asaltos": [
+                        {
+                            "id": "e_1770371954444_4_0_1770371970810",
+                            "arbitro": {
+                                "id": "a2101",
+                                "nombre": "Maria Ramirez",
+                                "numeroAfiliado": "2101",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1025",
+                                "nombre": "Marta Garcia",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1025"
+                            },
+                            "tirador2": {
+                                "id": "t1015",
+                                "nombre": "Juan Rodriguez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1015"
+                            },
+                            "tocados1": 9,
+                            "tocados2": 15,
+                            "terminado": true,
+                            "ganadorId": "t1015",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_4_1_1770371970810",
+                            "arbitro": {
+                                "id": "a2101",
+                                "nombre": "Maria Ramirez",
+                                "numeroAfiliado": "2101",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1017",
+                                "nombre": "Marta Lopez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1017"
+                            },
+                            "tirador2": {
+                                "id": "1769818611276",
+                                "nombre": "Iker Toribio",
+                                "club": {
+                                    "nombre": "Sala almazora1",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "24135"
+                            },
+                            "tocados1": 15,
+                            "tocados2": 6,
+                            "terminado": true,
+                            "ganadorId": "t1017",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_4_2_1770371970810",
+                            "arbitro": {
+                                "id": "a2010",
+                                "nombre": "Elena Ruiz",
+                                "numeroAfiliado": "2010",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1027",
+                                "nombre": "Ana Gomez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1027"
+                            },
+                            "tirador2": {
+                                "id": "t2501",
+                                "nombre": "Pablo Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2501"
+                            },
+                            "tocados1": 2,
+                            "tocados2": 15,
+                            "terminado": true,
+                            "ganadorId": "t2501",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_4_3_1770371970810",
+                            "arbitro": {
+                                "id": "a2015",
+                                "nombre": "Raul Gomez",
+                                "numeroAfiliado": "2015",
+                                "especialidades": [
+                                    "FLORETE",
+                                    "ESPADA"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1023",
+                                "nombre": "Marta Martinez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1023"
+                            },
+                            "tirador2": {
+                                "id": "t1028",
+                                "nombre": "Lucia Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1028"
+                            },
+                            "tocados1": 1,
+                            "tocados2": 15,
+                            "terminado": true,
+                            "ganadorId": "t1028",
+                            "limiteTocados": 15
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Semifinal",
+                    "asaltos": [
+                        {
+                            "id": "e_1770371954444_2_0_1770371970810",
+                            "arbitro": {
+                                "id": "a2198",
+                                "nombre": "Juanito Palotes",
+                                "numeroAfiliado": "2198",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1015",
+                                "nombre": "Juan Rodriguez",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1015"
+                            },
+                            "tirador2": {
+                                "id": "t1017",
+                                "nombre": "Marta Lopez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1017"
+                            },
+                            "tocados1": 13,
+                            "tocados2": 15,
+                            "terminado": true,
+                            "ganadorId": "t1017",
+                            "limiteTocados": 15
+                        },
+                        {
+                            "id": "e_1770371954444_2_1_1770371970810",
+                            "arbitro": {
+                                "id": "a2101",
+                                "nombre": "Maria Ramirez",
+                                "numeroAfiliado": "2101",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t2501",
+                                "nombre": "Pablo Blanco",
+                                "club": {
+                                    "nombre": "Club de Esgrima Valencia",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "2501"
+                            },
+                            "tirador2": {
+                                "id": "t1028",
+                                "nombre": "Lucia Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1028"
+                            },
+                            "tocados1": 5,
+                            "tocados2": 15,
+                            "terminado": true,
+                            "ganadorId": "t1028",
+                            "limiteTocados": 15
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Final",
+                    "asaltos": [
+                        {
+                            "id": "e_1770371954444_1_0_1770371970810",
+                            "arbitro": {
+                                "id": "a2001",
+                                "nombre": "Juan Ramirez",
+                                "numeroAfiliado": "2001",
+                                "especialidades": [
+                                    "ESPADA",
+                                    "SABLE",
+                                    "FLORETE"
+                                ]
+                            },
+                            "tirador1": {
+                                "id": "t1017",
+                                "nombre": "Marta Lopez",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1017"
+                            },
+                            "tirador2": {
+                                "id": "t1028",
+                                "nombre": "Lucia Blanco",
+                                "club": {
+                                    "nombre": "Real Club de Esgrima Madrid",
+                                    "numeroFiliacion": ""
+                                },
+                                "numeroAfiliado": "1028"
+                            },
+                            "tocados1": 15,
+                            "tocados2": 8,
+                            "terminado": true,
+                            "ganadorId": "t1017",
+                            "limiteTocados": 15
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "users": [
+        {
+            "id": "u1",
+            "username": "admin",
+            "password": "admin123",
+            "role": "ADMIN"
+        },
+        {
+            "id": "user_t2001",
+            "username": "juan2001",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t2001"
+        },
+        {
+            "id": "user_t2034",
+            "username": "juan2034",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t2034"
+        },
+        {
+            "id": "user_t2101",
+            "username": "maria2101",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t2101"
+        },
+        {
+            "id": "user_t1015",
+            "username": "juan1015",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1015"
+        },
+        {
+            "id": "user_t1021",
+            "username": "juan1021",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1021"
+        },
+        {
+            "id": "user_t2901",
+            "username": "pepa2901",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t2901"
+        },
+        {
+            "id": "user_t3010",
+            "username": "francisco3010",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t3010"
+        },
+        {
+            "id": "user_t2501",
+            "username": "pablo2501",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t2501"
+        },
+        {
+            "id": "user_t2231",
+            "username": "paz2231",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t2231"
+        },
+        {
+            "id": "user_t2198",
+            "username": "juanito2198",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t2198"
+        },
+        {
+            "id": "user_t21",
+            "username": "rodrigo21",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t21"
+        },
+        {
+            "id": "user_a2001",
+            "username": "juan2001",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2001"
+        },
+        {
+            "id": "user_a2317",
+            "username": "juan2317",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2317"
+        },
+        {
+            "id": "user_a2101",
+            "username": "maria2101",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2101"
+        },
+        {
+            "id": "user_a1015",
+            "username": "juan1015",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a1015"
+        },
+        {
+            "id": "user_a1021",
+            "username": "juan1021",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a1021"
+        },
+        {
+            "id": "user_a2198",
+            "username": "juanito2198",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2198"
+        },
+        {
+            "id": "user_a21",
+            "username": "rodrigo21",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a21"
+        },
+        {
+            "id": "user_1769818611276",
+            "username": "iker24135",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "1769818611276"
+        },
+        {
+            "id": "user_t1013",
+            "username": "carlos1013",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1013"
+        },
+        {
+            "id": "user_t1014",
+            "username": "raul1014",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1014"
+        },
+        {
+            "id": "user_t1016",
+            "username": "maria1016",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1016"
+        },
+        {
+            "id": "user_t1017",
+            "username": "marta1017",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1017"
+        },
+        {
+            "id": "user_t1018",
+            "username": "luis1018",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1018"
+        },
+        {
+            "id": "user_t1019",
+            "username": "raul1019",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1019"
+        },
+        {
+            "id": "user_t1020",
+            "username": "lucia1020",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1020"
+        },
+        {
+            "id": "user_t1022",
+            "username": "elena1022",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1022"
+        },
+        {
+            "id": "user_t1023",
+            "username": "marta1023",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1023"
+        },
+        {
+            "id": "user_t1024",
+            "username": "pedro1024",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1024"
+        },
+        {
+            "id": "user_t1025",
+            "username": "marta1025",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1025"
+        },
+        {
+            "id": "user_t1026",
+            "username": "luis1026",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1026"
+        },
+        {
+            "id": "user_t1027",
+            "username": "ana1027",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1027"
+        },
+        {
+            "id": "user_t1028",
+            "username": "lucia1028",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1028"
+        },
+        {
+            "id": "user_t1029",
+            "username": "sara1029",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1029"
+        },
+        {
+            "id": "user_t1030",
+            "username": "sofia1030",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1030"
+        },
+        {
+            "id": "user_t1031",
+            "username": "juan1031",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1031"
+        },
+        {
+            "id": "user_t1032",
+            "username": "sofia1032",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "t1032"
+        },
+        {
+            "id": "user_a2008",
+            "username": "pedro2008",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2008"
+        },
+        {
+            "id": "user_a2009",
+            "username": "maria2009",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2009"
+        },
+        {
+            "id": "user_a2010",
+            "username": "elena2010",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2010"
+        },
+        {
+            "id": "user_a2011",
+            "username": "pablo2011",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2011"
+        },
+        {
+            "id": "user_a2012",
+            "username": "raul2012",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2012"
+        },
+        {
+            "id": "user_a2013",
+            "username": "ana2013",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2013"
+        },
+        {
+            "id": "user_a2014",
+            "username": "maria2014",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2014"
+        },
+        {
+            "id": "user_a2015",
+            "username": "raul2015",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2015"
+        },
+        {
+            "id": "user_a2016",
+            "username": "raul2016",
+            "password": "password123",
+            "role": "REFEREE",
+            "linkedId": "a2016"
+        },
+        {
+            "id": "user_1769819062248",
+            "username": "jesus1235",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "1769819062248"
+        },
+        {
+            "id": "user_1769819072960",
+            "username": "raton6234",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "1769819072960"
+        },
+        {
+            "id": "user_1770371567937",
+            "username": "iker2",
+            "password": "password123",
+            "role": "FENCER",
+            "linkedId": "1770371567937"
+        }
+    ]
+}

@@ -3,14 +3,18 @@ package com.example.esgrima.ui
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.PersonAdd
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.esgrima.data.DataRepository
 import com.example.esgrima.models.Competicion
@@ -22,7 +26,7 @@ fun CompetitionDetailScreen(competitionId: String, onBack: () -> Unit) {
     val competitions by DataRepository.competitions.collectAsState()
     val comp = competitions.find { it.id == competitionId }
     var selectedTab by remember { mutableIntStateOf(0) }
-    val tabs = listOf("Poules", "Eliminatorias", "Inscritos")
+    val tabs = listOf("Poules", "Clasificación", "Eliminatorias", "Inscritos")
 
     Scaffold(
         topBar = {
@@ -54,9 +58,61 @@ fun CompetitionDetailScreen(competitionId: String, onBack: () -> Unit) {
                 
                 when (selectedTab) {
                     0 -> PouleTabContent(comp)
-                    1 -> EliminatoriasTabContent(comp)
-                    2 -> InscritosTabContent(comp)
+                    1 -> ClasificacionTabContent(comp)
+                    2 -> EliminatoriasScreen(onBack = {})
+                    3 -> InscritosTabContent(comp)
                 }
+            }
+        }
+    }
+}
+
+@Composable
+fun ClasificacionTabContent(comp: Competicion) {
+    val ranking = DataRepository.getRankingCalculado(comp)
+    val corte = comp.numClasificadosCorte
+
+    if (ranking.isEmpty()) {
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Text("No hay resultados suficientes para generar la clasificación.")
+        }
+    } else {
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(16.dp)
+        ) {
+            item {
+                Row(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Text("Pos", modifier = Modifier.width(40.dp), fontWeight = FontWeight.Bold)
+                    Text("Tirador", modifier = Modifier.weight(1f), fontWeight = FontWeight.Bold)
+                    Text("Estado", modifier = Modifier.width(80.dp), fontWeight = FontWeight.Bold)
+                    Text("V/M", modifier = Modifier.width(50.dp), fontWeight = FontWeight.Bold)
+                    Text("Ind.", modifier = Modifier.width(50.dp), fontWeight = FontWeight.Bold)
+                }
+                HorizontalDivider()
+            }
+            itemsIndexed(ranking) { index, item ->
+                val estaEnCorte = index < corte
+                val bgColor = if (estaEnCorte) Color(0xFFE8F5E9) else Color(0xFFFFEBEE)
+                
+                Surface(color = bgColor, modifier = Modifier.fillMaxWidth()) {
+                    Row(modifier = Modifier.fillMaxWidth().padding(vertical = 12.dp, horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Text("${item.posicion}", modifier = Modifier.width(40.dp))
+                        Text(item.tirador.nombre, modifier = Modifier.weight(1f))
+                        
+                        Text(
+                            text = if (estaEnCorte) "DENTRO" else "ELIMIN.",
+                            modifier = Modifier.width(80.dp),
+                            color = if (estaEnCorte) Color(0xFF2E7D32) else Color(0xFFC62828),
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold
+                        )
+                        
+                        Text(String.format("%.2f", item.v_m), modifier = Modifier.width(50.dp))
+                        Text("${if (item.indice > 0) "+" else ""}${item.indice}", modifier = Modifier.width(50.dp))
+                    }
+                }
+                HorizontalDivider()
             }
         }
     }
@@ -147,12 +203,8 @@ fun PouleTabContent(comp: Competicion) {
                 ) {
                     items(comp.poules.size) { index ->
                         val poule = comp.poules[index]
-                        Text(poule.nombre, style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.primary)
-                        poule.asaltos.forEach { asalto ->
-                            AsaltoItem(comp.id, poule.id, asalto)
-                            Spacer(modifier = Modifier.height(8.dp))
-                        }
-                        HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp), thickness = 2.dp)
+                        PouleMatrix(comp, poule)
+                        Spacer(modifier = Modifier.height(16.dp))
                     }
                 }
             }
@@ -187,55 +239,5 @@ fun PouleTabContent(comp: Competicion) {
                 TextButton(onClick = { showPouleDialog = false }) { Text("Cancelar") }
             }
         )
-    }
-}
-
-@Composable
-fun EliminatoriasTabContent(comp: Competicion) {
-    val currentUser by DataRepository.currentUser.collectAsState()
-
-    if (comp.rondasEliminatorias.isEmpty()) {
-        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text("El cuadro aún no ha sido generado.")
-                if (currentUser?.role == Role.ADMIN) {
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Button(onClick = { DataRepository.generarCuadroEliminatorio(comp.id) }) {
-                        Text("Generar Cuadro desde Ranking")
-                    }
-                }
-            }
-        }
-    } else {
-        LazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            val rondas = comp.rondasEliminatorias.reversed()
-            items(rondas.size) { index ->
-                val ronda = rondas[index]
-                Text(ronda.nombre, style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.primary)
-                ronda.asaltos.forEach { asalto ->
-                    AsaltoEliminatorioItem(comp.id, ronda.nombre, asalto)
-                    Spacer(modifier = Modifier.height(8.dp))
-                }
-            }
-            
-            val ultimaRonda = comp.rondasEliminatorias.last()
-            val todosTerminados = ultimaRonda.asaltos.all { it.terminado }
-            val noEsFinal = ultimaRonda.asaltos.size > 1
-
-            if (todosTerminados && noEsFinal && currentUser?.role == Role.ADMIN) {
-               item {
-                   Button(
-                       onClick = { DataRepository.avanzarCuadro(comp.id) },
-                       modifier = Modifier.fillMaxWidth()
-                   ) {
-                       Text("Avanzar Siguiente Ronda")
-                   }
-               }
-            }
-        }
     }
 }

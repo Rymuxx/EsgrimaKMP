@@ -32,7 +32,8 @@ data class Tirador(
     val id: String,
     val nombre: String,
     val club: Club,
-    val numeroAfiliado: String
+    val numeroAfiliado: String,
+    val especialidades: List<Arma> = emptyList()
 )
 
 @Serializable
@@ -54,7 +55,8 @@ data class Asalto(
     val tiempo: String = "03:00", // Tiempo del asalto
     val terminado: Boolean = false,
     val esBye: Boolean = false,
-    val ganadorId: String? = null
+    val ganadorId: String? = null,
+    val limiteTocados: Int = 5 // 5 para poules, 15 para eliminatorias
 )
 
 @Serializable
@@ -83,7 +85,8 @@ data class Competicion(
     val fase: FaseCompeticion = FaseCompeticion.INSCRIPCION,
     val inscritosIds: Set<String> = emptySet(),
     val poules: List<Poule> = emptyList(),
-    val rondasEliminatorias: List<Ronda> = emptyList() // Lista de rondas (Octavos -> Final)
+    val rondasEliminatorias: List<Ronda> = emptyList(),
+    val numClasificadosCorte: Int = 16 // Configurable para el tablón
 )
 
 @Serializable

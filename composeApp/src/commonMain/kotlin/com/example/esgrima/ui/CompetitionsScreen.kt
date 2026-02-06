@@ -28,6 +28,7 @@ fun CompetitionsScreen(onBack: () -> Unit, onSelectCompetition: (String) -> Unit
     var organizer by remember { mutableStateOf("") }
     var place by remember { mutableStateOf("") }
     var selectedArma by remember { mutableStateOf(Arma.ESPADA) }
+    var numCorte by remember { mutableStateOf("16") }
 
     Scaffold(
         topBar = {
@@ -72,7 +73,7 @@ fun CompetitionsScreen(onBack: () -> Unit, onSelectCompetition: (String) -> Unit
                         Column(modifier = Modifier.weight(1f)) {
                             Text(comp.nombre, style = MaterialTheme.typography.titleLarge)
                             Text("${comp.arma} - ${comp.lugar}", style = MaterialTheme.typography.bodyMedium)
-                            Text("Inscritos: ${comp.inscritosIds.size}", style = MaterialTheme.typography.labelSmall)
+                            Text("Corte: ${comp.numClasificadosCorte} | Inscritos: ${comp.inscritosIds.size}", style = MaterialTheme.typography.labelSmall)
                         }
 
                         if (currentUser?.role == Role.ADMIN) {
@@ -104,6 +105,12 @@ fun CompetitionsScreen(onBack: () -> Unit, onSelectCompetition: (String) -> Unit
                         OutlinedTextField(value = name, onValueChange = { name = it }, label = { Text("Nombre") })
                         OutlinedTextField(value = organizer, onValueChange = { organizer = it }, label = { Text("Organizador") })
                         OutlinedTextField(value = place, onValueChange = { place = it }, label = { Text("Lugar") })
+                        OutlinedTextField(
+                            value = numCorte, 
+                            onValueChange = { if (it.all { char -> char.isDigit() }) numCorte = it }, 
+                            label = { Text("Nº Clasificados (Corte)") },
+                            modifier = Modifier.fillMaxWidth()
+                        )
                         Text("Arma:")
                         Row {
                             Arma.entries.forEach { arma ->
@@ -125,7 +132,8 @@ fun CompetitionsScreen(onBack: () -> Unit, onSelectCompetition: (String) -> Unit
                             entidadOrganizadora = organizer,
                             fecha = "2025-01-20",
                             lugar = place,
-                            arma = selectedArma
+                            arma = selectedArma,
+                            numClasificadosCorte = numCorte.toIntOrNull() ?: 16
                         )
                         DataRepository.addCompetition(newComp)
                         showAddDialog = false

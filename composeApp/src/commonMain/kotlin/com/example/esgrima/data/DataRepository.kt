@@ -23,7 +23,7 @@ data class CompetitionState(
 
 object DataRepository {
     private val adminUser = User("u1", "admin", "admin123", Role.ADMIN)
-    private val DummyFencer = Tirador("bye", "PASO LIBRE", Club("---", ""), "---")
+    private val DummyFencer = Tirador("bye", "PASO LIBRE", Club("---", ""), "---", emptyList())
 
     private val _fencers = MutableStateFlow<List<Tirador>>(emptyList())
     val fencers: StateFlow<List<Tirador>> = _fencers.asStateFlow()
@@ -61,7 +61,7 @@ object DataRepository {
             val id = "t$lic"
             if (_fencers.value.none { it.id == id }) {
                 val nombre = "${nombres.random()} ${apellidos.random()}"
-                addFencer(Tirador(id, nombre, Club(clubes.random(), ""), lic))
+                addFencer(Tirador(id, nombre, Club(clubes.random(), ""), lic, listOf(Arma.entries.random())))
             }
             i++
         }
@@ -181,6 +181,15 @@ object DataRepository {
         save()
     }
 
+    fun deleteFencer(id: String) {
+        _fencers.value = _fencers.value.filter { it.id != id }
+        _users.value = _users.value.filter { it.linkedId != id }
+        _competitions.value = _competitions.value.map { comp ->
+            comp.copy(inscritosIds = comp.inscritosIds.filter { it != id }.toSet())
+        }
+        save()
+    }
+
     fun addReferee(referee: Arbitro) {
         if (_referees.value.any { it.id == referee.id }) return
         _referees.value += referee
@@ -219,6 +228,78 @@ object DataRepository {
         save()
     }
 
+    fun simulateFullEliminatorias(competitionId: String) {
+        var comp = _competitions.value.find { it.id == competitionId } ?: return
+        if (comp.rondasEliminatorias.isEmpty()) return
+
+        var currentComp = comp
+        while (true) {
+            val lastRonda = currentComp.rondasEliminatorias.lastOrNull() ?: break
+            
+            val updatedAsaltos = lastRonda.asaltos.map { asalto ->
+                if (asalto.terminado) asalto
+                else {
+                    val (s1, s2) = if (Random.nextBoolean()) Pair(15, Random.nextInt(0, 15)) else Pair(Random.nextInt(0, 15), 15)
+                    asalto.copy(tocados1 = s1, tocados2 = s2, terminado = true, ganadorId = if (s1 > s2) asalto.tirador1.id else asalto.tirador2.id)
+                }
+            }
+            val rondaActualizada = lastRonda.copy(asaltos = updatedAsaltos)
+            currentComp = currentComp.copy(rondasEliminatorias = currentComp.rondasEliminatorias.dropLast(1) + rondaActualizada)
+
+            val ganadores = updatedAsaltos.map { asalto ->
+                if (asalto.esBye) asalto.tirador1
+                else if (asalto.tocados1 >= asalto.tocados2) asalto.tirador1 
+                else asalto.tirador2
+            }.filter { it.id != DummyFencer.id }
+
+            if (ganadores.size <= 1) {
+                currentComp = currentComp.copy(fase = FaseCompeticion.FINALIZADA)
+                break
+            }
+
+            val nuevosAsaltos = mutableListOf<Asalto>()
+            for (i in ganadores.indices step 2) {
+                val t1 = ganadores[i]
+                val t2 = ganadores.getOrNull(i + 1)
+                if (t2 != null) {
+                    val referee = getRandomSpecialistReferee(currentComp.arma) ?: Arbitro("temp", "Sin Arbitro", "0", emptyList())
+                    nuevosAsaltos.add(Asalto(
+                        id = "e_${competitionId}_${updatedAsaltos.size / 2}_${i/2}_${Clock.System.now().toEpochMilliseconds()}",
+                        arbitro = referee,
+                        tirador1 = t1,
+                        tirador2 = t2,
+                        limiteTocados = 15
+                    ))
+                } else {
+                    nuevosAsaltos.add(Asalto(
+                        id = "e_${competitionId}_${updatedAsaltos.size / 2}_${i/2}_${Clock.System.now().toEpochMilliseconds()}",
+                        arbitro = Arbitro("bye", "BYE", "0", emptyList()),
+                        tirador1 = t1,
+                        tirador2 = DummyFencer,
+                        tocados1 = 15,
+                        terminado = true,
+                        esBye = true,
+                        ganadorId = t1.id,
+                        limiteTocados = 15
+                    ))
+                }
+            }
+
+            if (nuevosAsaltos.isEmpty()) break
+
+            val nombre = when(nuevosAsaltos.size) {
+                4 -> "Cuartos"
+                2 -> "Semifinal"
+                1 -> "Final"
+                else -> "Tablón de ${nuevosAsaltos.size * 2}"
+            }
+            currentComp = currentComp.copy(rondasEliminatorias = currentComp.rondasEliminatorias + Ronda(nombre, nuevosAsaltos))
+        }
+
+        _competitions.value = _competitions.value.map { if (it.id == competitionId) currentComp else it }
+        save()
+    }
+
     fun createPoulesAutomaticamente(competitionId: String, numPoulesInput: Int? = null) {
         val comp = _competitions.value.find { it.id == competitionId } ?: return
         val inscritos = _fencers.value.filter { it.id in comp.inscritosIds }.shuffled()
@@ -226,10 +307,17 @@ object DataRepository {
         if (inscritos.size < 2) return
 
         val numPoules = (numPoulesInput ?: 1).coerceAtMost(inscritos.size / 2).coerceAtLeast(1)
-        val fencersPerPoule = ceil(inscritos.size.toDouble() / numPoules).toInt()
-        val chunks = inscritos.chunked(fencersPerPoule)
+        val baseSize = inscritos.size / numPoules
+        val extraFencers = inscritos.size % numPoules
         
-        val newPoules = chunks.mapIndexed { index, fencersInPoule ->
+        val newPoules = mutableListOf<Poule>()
+        var currentPointer = 0
+        
+        for (index in 0 until numPoules) {
+            val sizeForThisPoule = if (index < extraFencers) baseSize + 1 else baseSize
+            val fencersInPoule = inscritos.subList(currentPointer, currentPointer + sizeForThisPoule)
+            currentPointer += sizeForThisPoule
+            
             val asaltos = mutableListOf<Asalto>()
             for (i in fencersInPoule.indices) {
                 for (j in i + 1 until fencersInPoule.size) {
@@ -244,12 +332,14 @@ object DataRepository {
                     )
                 }
             }
-            Poule(
-                id = "poule_${competitionId}_${index}",
-                nombre = "Poule ${index + 1}",
-                asaltos = asaltos,
-                arbitros = listOfNotNull(getRandomSpecialistReferee(comp.arma)),
-                pistas = listOf("Pista ${index + 1}")
+            newPoules.add(
+                Poule(
+                    id = "poule_${competitionId}_${index}",
+                    nombre = "Poule ${index + 1}",
+                    asaltos = asaltos,
+                    arbitros = listOfNotNull(getRandomSpecialistReferee(comp.arma)),
+                    pistas = listOf("Pista ${index + 1}")
+                )
             )
         }
 
@@ -292,26 +382,22 @@ object DataRepository {
         return seeds
     }
 
-    fun generarCuadroEliminatorio(competitionId: String) {
+    fun generarCuadroEliminatorio(competitionId: String, numClasificados: Int) {
         val comp = _competitions.value.find { it.id == competitionId } ?: return
         val completeRanking = getRankingCalculado(comp)
-        
-        // REGLA: Solo pasan a eliminatorias los que han ganado al menos un asalto (llegado a 5 primero)
-        val ranking = completeRanking.filter { it.victorias > 0 }
-        
-        val numTiradores = ranking.size
-        if (numTiradores == 0) return
+        val clasificados = completeRanking.take(numClasificados)
+        val numTiradores = clasificados.size
+        if (numTiradores < 2) return
 
-        val nextPowerOfTwo = 2.0.pow(ceil(log2(numTiradores.toDouble())).coerceAtLeast(1.0)).toInt()
+        val nextPowerOfTwo = 2.0.pow(ceil(log2(numTiradores.toDouble())).coerceAtLeast(3.0)).toInt()
         val order = getSeedingOrder(nextPowerOfTwo)
         
         val asaltos = mutableListOf<Asalto>()
         for (i in 0 until nextPowerOfTwo step 2) {
             val s1 = order[i]
             val s2 = order[i+1]
-            
-            val t1 = ranking.getOrNull(s1 - 1)?.tirador
-            val t2 = ranking.getOrNull(s2 - 1)?.tirador
+            val t1 = clasificados.getOrNull(s1 - 1)?.tirador
+            val t2 = clasificados.getOrNull(s2 - 1)?.tirador
             
             if (t1 != null && t2 != null) {
                 val referee = getRandomSpecialistReferee(comp.arma) ?: Arbitro("temp", "Sin Arbitro", "0", emptyList())
@@ -319,7 +405,8 @@ object DataRepository {
                     id = "e_${competitionId}_${nextPowerOfTwo}_${i/2}_${Clock.System.now().toEpochMilliseconds()}",
                     arbitro = referee,
                     tirador1 = t1,
-                    tirador2 = t2
+                    tirador2 = t2,
+                    limiteTocados = 15
                 ))
             } else if (t1 != null) {
                 asaltos.add(Asalto(
@@ -330,12 +417,16 @@ object DataRepository {
                     tocados1 = 15,
                     tocados2 = 0,
                     terminado = true,
-                    esBye = true
+                    esBye = true,
+                    ganadorId = t1.id,
+                    limiteTocados = 15
                 ))
             }
         }
         
         val nombre = when(nextPowerOfTwo) {
+            64 -> "Tablón de 64"
+            32 -> "Dieciseisavos"
             16 -> "Octavos"
             8 -> "Cuartos"
             4 -> "Semifinal"
@@ -354,7 +445,6 @@ object DataRepository {
     fun avanzarCuadro(competitionId: String) {
         val comp = _competitions.value.find { it.id == competitionId } ?: return
         val actual = comp.rondasEliminatorias.lastOrNull() ?: return
-        
         val ganadores = actual.asaltos.map { asalto ->
             if (asalto.esBye) asalto.tirador1
             else if (asalto.tocados1 >= asalto.tocados2) asalto.tirador1 
@@ -371,7 +461,8 @@ object DataRepository {
                     id = "e_${competitionId}_${actual.asaltos.size / 2}_${i/2}_${Clock.System.now().toEpochMilliseconds()}",
                     arbitro = referee,
                     tirador1 = t1,
-                    tirador2 = t2
+                    tirador2 = t2,
+                    limiteTocados = 15
                 ))
             } else {
                 nuevosAsaltos.add(Asalto(
@@ -381,11 +472,14 @@ object DataRepository {
                     tirador2 = DummyFencer,
                     tocados1 = 15,
                     terminado = true,
-                    esBye = true
+                    esBye = true,
+                    ganadorId = t1.id,
+                    limiteTocados = 15
                 ))
             }
         }
         
+        if (nuevosAsaltos.isEmpty()) return
         val nombre = when(nuevosAsaltos.size) {
             4 -> "Cuartos"
             2 -> "Semifinal"
@@ -408,7 +502,7 @@ object DataRepository {
                     if (ronda.nombre == nombreRonda) {
                         ronda.copy(asaltos = ronda.asaltos.map { asalto ->
                             if (asalto.id == asaltoId) {
-                                asalto.copy(tocados1 = t1, tocados2 = t2, terminado = terminado)
+                                asalto.copy(tocados1 = t1, tocados2 = t2, terminado = terminado, ganadorId = if (terminado) (if (t1 > t2) asalto.tirador1.id else asalto.tirador2.id) else null)
                             } else asalto
                         })
                     } else ronda
@@ -426,8 +520,8 @@ object DataRepository {
                 (it.tirador1.id == fencer.id && it.tocados1 > it.tocados2) || 
                 (it.tirador2.id == fencer.id && it.tocados2 > it.tocados1) 
             }
-            val td = matches.sumOf { if (it.tirador1.id == fencer.id) it.tocados1 else it.tocados2 }
-            val tr = matches.sumOf { if (it.tirador1.id == fencer.id) it.tocados2 else it.tocados1 }
+            val td = matches.sumOf { m: Asalto -> if (m.tirador1.id == fencer.id) m.tocados1 else m.tocados2 }
+            val tr = matches.sumOf { m: Asalto -> if (m.tirador1.id == fencer.id) m.tocados2 else m.tocados1 }
             
             val v_m = if (matches.isNotEmpty()) wins.toDouble() / matches.size else 0.0
             Clasificacion(
@@ -454,8 +548,8 @@ object DataRepository {
                 (it.tirador1.id == fencer.id && it.tocados1 > it.tocados2) || 
                 (it.tirador2.id == fencer.id && it.tocados2 > it.tocados1) 
             }
-            val td = matches.sumOf { if (it.tirador1.id == fencer.id) it.tocados1 else it.tocados2 }
-            val tr = matches.sumOf { if (it.tirador1.id == fencer.id) it.tocados2 else it.tocados1 }
+            val td = matches.sumOf { m: Asalto -> if (m.tirador1.id == fencer.id) m.tocados1 else m.tocados2 }
+            val tr = matches.sumOf { m: Asalto -> if (m.tirador1.id == fencer.id) m.tocados2 else m.tocados1 }
             
             val v_m = if (matches.isNotEmpty()) wins.toDouble() / matches.size else 0.0
             Clasificacion(
