@@ -5,6 +5,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -25,7 +26,7 @@ data class DashboardItem(
 @Composable
 fun DashboardScreen(onNavigate: (String) -> Unit) {
     val currentUser by DataRepository.currentUser.collectAsState()
-    var showRoleDialog by remember { mutableStateOf(false) }
+    var showLogoutDialog by remember { mutableStateOf(false) }
     
     val allItems = listOf(
         DashboardItem("Competiciones", Icons.Default.EmojiEvents, "competitions"),
@@ -48,14 +49,14 @@ fun DashboardScreen(onNavigate: (String) -> Unit) {
                     Column {
                         Text("Esgrima Pro")
                         Text(
-                            text = "Rol actual: ${currentUser?.role}",
+                            text = "Usuario: ${currentUser?.username} (${currentUser?.role})",
                             style = MaterialTheme.typography.labelSmall
                         )
                     }
                 },
                 actions = {
-                    IconButton(onClick = { showRoleDialog = true }) {
-                        Icon(Icons.Default.AccountCircle, contentDescription = "Cambiar Rol")
+                    IconButton(onClick = { showLogoutDialog = true }) {
+                        Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = "Cerrar Sesión")
                     }
                 }
             )
@@ -87,31 +88,26 @@ fun DashboardScreen(onNavigate: (String) -> Unit) {
             }
         }
 
-        if (showRoleDialog) {
+        if (showLogoutDialog) {
             AlertDialog(
-                onDismissRequest = { showRoleDialog = false },
-                title = { Text("Seleccionar Rol") },
-                text = {
-                    Column {
-                        Role.entries.forEach { role ->
-                            Row(
-                                modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                RadioButton(
-                                    selected = currentUser?.role == role,
-                                    onClick = {
-                                        DataRepository.switchRole(role)
-                                        showRoleDialog = false
-                                    }
-                                )
-                                Text(role.name, modifier = Modifier.padding(start = 8.dp))
-                            }
-                        }
+                onDismissRequest = { showLogoutDialog = false },
+                title = { Text("Cerrar Sesión") },
+                text = { Text("¿Estás seguro de que quieres salir?") },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            DataRepository.logout()
+                            showLogoutDialog = false
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
+                    ) {
+                        Text("Salir")
                     }
                 },
-                confirmButton = {
-                    TextButton(onClick = { showRoleDialog = false }) { Text("Cerrar") }
+                dismissButton = {
+                    TextButton(onClick = { showLogoutDialog = false }) {
+                        Text("Cancelar")
+                    }
                 }
             )
         }

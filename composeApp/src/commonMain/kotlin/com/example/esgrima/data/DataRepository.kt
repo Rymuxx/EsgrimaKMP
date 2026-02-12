@@ -23,6 +23,9 @@ data class CompetitionState(
 
 object DataRepository {
     private val adminUser = User("u1", "admin", "admin123", Role.ADMIN)
+    private val testReferee = User("u2", "referee", "password123", Role.REFEREE, linkedId = "a-test")
+    private val testFencer = User("u3", "fencer", "password123", Role.FENCER, linkedId = "t-test")
+    
     private val DummyFencer = Tirador("bye", "PASO LIBRE", Club("---", ""), "---", emptyList())
 
     private val _fencers = MutableStateFlow<List<Tirador>>(emptyList())
@@ -31,7 +34,7 @@ object DataRepository {
     private val _referees = MutableStateFlow<List<Arbitro>>(emptyList())
     val referees: StateFlow<List<Arbitro>> = _referees.asStateFlow()
 
-    private val _users = MutableStateFlow<List<User>>(listOf(adminUser))
+    private val _users = MutableStateFlow<List<User>>(listOf(adminUser, testReferee, testFencer))
     val users: StateFlow<List<User>> = _users.asStateFlow()
 
     private val _currentUser = MutableStateFlow<User?>(null)
@@ -47,6 +50,46 @@ object DataRepository {
         cargarDesdeDisco()
         if (_fencers.value.size < 32 || _referees.value.size < 16) {
             seedData()
+        }
+
+        // Aseguramos que existan los tiradores/árbitros vinculados a las cuentas de prueba
+        if (_fencers.value.none { it.id == "t-test" }) {
+            _fencers.value += Tirador("t-test", "Tirador de Prueba", Club("Club de Prueba", ""), "TEST-001", listOf(Arma.ESPADA))
+        }
+        if (_referees.value.none { it.id == "a-test" }) {
+            _referees.value += Arbitro("a-test", "Árbitro de Prueba", "REF-001", listOf(Arma.ESPADA, Arma.FLORETE, Arma.SABLE))
+        }
+
+        // Aseguramos que los usuarios de prueba siempre existan y tengan el linkedId correcto
+        val currentUsers = _users.value.toMutableList()
+        var changed = false
+        
+        val fencerUserIdx = currentUsers.indexOfFirst { it.username == "fencer" }
+        if (fencerUserIdx == -1) {
+            currentUsers.add(testFencer)
+            changed = true
+        } else if (currentUsers[fencerUserIdx].linkedId != "t-test") {
+            currentUsers[fencerUserIdx] = testFencer
+            changed = true
+        }
+
+        val refereeUserIdx = currentUsers.indexOfFirst { it.username == "referee" }
+        if (refereeUserIdx == -1) {
+            currentUsers.add(testReferee)
+            changed = true
+        } else if (currentUsers[refereeUserIdx].linkedId != "a-test") {
+            currentUsers[refereeUserIdx] = testReferee
+            changed = true
+        }
+
+        if (currentUsers.none { it.username == "admin" }) {
+            currentUsers.add(adminUser)
+            changed = true
+        }
+
+        if (changed) {
+            _users.value = currentUsers
+            save()
         }
     }
 
@@ -112,7 +155,7 @@ object DataRepository {
 
     fun login(username: String, password: String): Boolean {
         val user = _users.value.find { 
-            it.username.lowercase() == username.lowercase() && it.password == password 
+            it.username.trim().lowercase() == username.trim().lowercase() && it.password == password 
         }
         return if (user != null) {
             _currentUser.value = user

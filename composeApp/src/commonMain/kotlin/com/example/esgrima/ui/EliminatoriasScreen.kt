@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import com.example.esgrima.data.DataRepository
 import com.example.esgrima.models.Asalto
 import com.example.esgrima.models.FaseCompeticion
+import com.example.esgrima.models.Role
 import com.example.esgrima.models.Tirador
 import kotlin.math.pow
 
@@ -29,10 +30,16 @@ import kotlin.math.pow
 fun EliminatoriasScreen(onBack: () -> Unit) {
     val selectedCompId by DataRepository.selectedCompetitionId.collectAsState()
     val competitions by DataRepository.competitions.collectAsState()
+    val currentUser by DataRepository.currentUser.collectAsState()
     val comp = competitions.find { it.id == selectedCompId }
     
     var showConfigDialog by remember { mutableStateOf(false) }
     var corteInput by remember { mutableStateOf(comp?.numClasificadosCorte?.toString() ?: "16") }
+
+    val canAdvance = remember(comp) {
+        val lastRonda = comp?.rondasEliminatorias?.lastOrNull()
+        lastRonda != null && lastRonda.asaltos.all { it.terminado } && comp.fase != FaseCompeticion.FINALIZADA
+    }
 
     Scaffold(
         topBar = {
@@ -44,9 +51,16 @@ fun EliminatoriasScreen(onBack: () -> Unit) {
                     }
                 },
                 actions = {
-                    if (comp != null && comp.rondasEliminatorias.isNotEmpty() && comp.fase != FaseCompeticion.FINALIZADA) {
-                        IconButton(onClick = { DataRepository.simulateFullEliminatorias(comp.id) }) {
-                            Icon(Icons.Default.PlayArrow, contentDescription = "Simular Todo")
+                    if (currentUser?.role == Role.ADMIN && comp != null && comp.rondasEliminatorias.isNotEmpty()) {
+                        if (comp.fase != FaseCompeticion.FINALIZADA) {
+                            IconButton(onClick = { DataRepository.simulateFullEliminatorias(comp.id) }) {
+                                Icon(Icons.Default.PlayArrow, contentDescription = "Simular Todo")
+                            }
+                            if (canAdvance) {
+                                IconButton(onClick = { DataRepository.avanzarCuadro(comp.id) }) {
+                                    Icon(Icons.Default.SkipNext, contentDescription = "Siguiente Ronda")
+                                }
+                            }
                         }
                     }
                 }
@@ -63,8 +77,10 @@ fun EliminatoriasScreen(onBack: () -> Unit) {
                     Icon(Icons.Default.AccountTree, contentDescription = null, modifier = Modifier.size(64.dp), tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f))
                     Spacer(modifier = Modifier.height(16.dp))
                     Text("El cuadro no ha sido generado.")
-                    Button(onClick = { showConfigDialog = true }, modifier = Modifier.padding(top = 16.dp)) {
-                        Text("Configurar Corte y Generar Tabla")
+                    if (currentUser?.role == Role.ADMIN) {
+                        Button(onClick = { showConfigDialog = true }, modifier = Modifier.padding(top = 16.dp)) {
+                            Text("Configurar Corte y Generar Tabla")
+                        }
                     }
                 }
             }
@@ -106,7 +122,7 @@ fun EliminatoriasScreen(onBack: () -> Unit) {
 
                                     ronda.asaltos.forEachIndexed { asaltoIdx, asalto ->
                                         Box(contentAlignment = Alignment.Center) {
-                                            TableauMatchCard(comp.id, ronda.nombre, asalto)
+                                            TableauMatchCard(comp.id, ronda.nombre, asalto, currentUser?.role == Role.ADMIN)
                                             
                                             if (!isLastRonda) {
                                                 val isUpper = asaltoIdx % 2 == 0
@@ -159,11 +175,11 @@ fun EliminatoriasScreen(onBack: () -> Unit) {
 }
 
 @Composable
-fun TableauMatchCard(competitionId: String, nombreRonda: String, asalto: Asalto) {
+fun TableauMatchCard(competitionId: String, nombreRonda: String, asalto: Asalto, canEdit: Boolean) {
     var showEditDialog by remember { mutableStateOf(false) }
 
     Card(
-        modifier = Modifier.width(200.dp).clickable(enabled = !asalto.esBye) { showEditDialog = true },
+        modifier = Modifier.width(200.dp).clickable(enabled = canEdit && !asalto.esBye) { showEditDialog = true },
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         colors = CardDefaults.cardColors(
             containerColor = if (asalto.terminado) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.surface

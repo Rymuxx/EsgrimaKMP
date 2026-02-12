@@ -60,6 +60,7 @@ fun CompetitionsScreen(onBack: () -> Unit, onSelectCompetition: (String) -> Unit
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     onClick = { 
+                        // Permitimos entrar a ver si eres Admin, Árbitro o Tirador Inscrito
                         if (currentUser?.role != Role.FENCER || isInscribed) {
                             DataRepository.selectCompetition(comp.id)
                             onSelectCompetition(comp.id) 
@@ -84,7 +85,11 @@ fun CompetitionsScreen(onBack: () -> Unit, onSelectCompetition: (String) -> Unit
 
                         if (currentUser?.role == Role.FENCER) {
                             if (isInscribed) {
-                                Icon(Icons.Default.CheckCircle, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text("Inscrito", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                    Icon(Icons.Default.CheckCircle, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+                                }
                             } else {
                                 Button(onClick = { DataRepository.inscribirseEnCompeticion(comp.id) }) {
                                     Text("Inscribirse")
