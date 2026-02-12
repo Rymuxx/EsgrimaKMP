@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import com.example.esgrima.data.DataRepository
 import com.example.esgrima.models.Competicion
 import com.example.esgrima.models.Role
+import kotlin.math.roundToInt
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -67,6 +68,24 @@ fun CompetitionDetailScreen(competitionId: String, onBack: () -> Unit) {
     }
 }
 
+// Función auxiliar para formatear decimales en commonMain
+private fun Double.format(decimals: Int): String {
+    val factor = 10.0.let { base -> 
+        var res = 1.0
+        repeat(decimals) { res *= base }
+        res
+    }
+    val rounded = (this * factor).roundToInt() / factor
+    val s = rounded.toString()
+    return if (s.contains(".")) {
+        val parts = s.split(".")
+        val decimalPart = parts[1].padEnd(decimals, '0').take(decimals)
+        "${parts[0]}.$decimalPart"
+    } else {
+        s + "." + "0".repeat(decimals)
+    }
+}
+
 @Composable
 fun ClasificacionTabContent(comp: Competicion) {
     val ranking = DataRepository.getRankingCalculado(comp)
@@ -108,7 +127,7 @@ fun ClasificacionTabContent(comp: Competicion) {
                             fontWeight = FontWeight.Bold
                         )
                         
-                        Text(String.format("%.2f", item.v_m), modifier = Modifier.width(50.dp))
+                        Text(item.v_m.format(2), modifier = Modifier.width(50.dp))
                         Text("${if (item.indice > 0) "+" else ""}${item.indice}", modifier = Modifier.width(50.dp))
                     }
                 }

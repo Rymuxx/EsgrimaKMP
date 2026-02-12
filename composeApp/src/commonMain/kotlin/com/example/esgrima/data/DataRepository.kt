@@ -10,7 +10,6 @@ import kotlin.math.pow
 import kotlin.math.ceil
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
-import java.io.File
 import kotlin.random.Random
 
 @Serializable
@@ -131,25 +130,25 @@ object DataRepository {
         try {
             val json = Json { prettyPrint = true }
             val state = CompetitionState(_fencers.value, _referees.value, _competitions.value, _users.value)
-            File("competicion.json").writeText(json.encodeToString(CompetitionState.serializer(), state))
+            Persistence.save("competicion", json.encodeToString(CompetitionState.serializer(), state))
         } catch (e: Exception) {
-            e.printStackTrace()
+            // Manejo de errores silencioso para no romper la UI
         }
     }
 
     private fun cargarDesdeDisco() {
         try {
-            val file = File("competicion.json")
-            if (file.exists()) {
+            val content = Persistence.load("competicion")
+            if (content != null) {
                 val json = Json { ignoreUnknownKeys = true }
-                val state = json.decodeFromString(CompetitionState.serializer(), file.readText())
+                val state = json.decodeFromString(CompetitionState.serializer(), content)
                 _fencers.value = state.fencers
                 _referees.value = state.referees
                 _competitions.value = state.competitions
                 _users.value = state.users
             }
         } catch (e: Exception) {
-            e.printStackTrace()
+            // Manejo de errores silencioso
         }
     }
 
